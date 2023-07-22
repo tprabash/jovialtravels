@@ -1,0 +1,79 @@
+<nav class="page-breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a routerLink=".">Forms</a></li>
+    <li class="breadcrumb-item"><a routerLink=".">Advanced Elements</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Input Mask</li>
+  </ol>
+</nav>
+
+<div class="row">
+  <div class="col-md-12 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Input Mask</h4>
+        <p class=“text-muted”>Read the <a href="https://github.com/JsDaddy/ngx-mask" target="_blank"> Official Ngx-mask Documentation </a>for a full list of instructions and other options.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12 grid-margin">
+    <div class="card">
+      <div class="card-body">
+        <form class="forms-sample">
+          <div class="row mb-3">
+            <div class="col">
+              <label class="form-label">Date:</label>
+              <input class="form-control mb-4 mb-md-0" mask="d0/M0/0000" placeholder="dd/mm/yyyy"/>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Hour:</label>
+              <input class="form-control" mask="Hh:m0:s0" placeholder="hh:mm:ss"/>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <label class="form-label">Date hour:</label>
+              <input class="form-control mb-4 mb-md-0" mask="d0/M0/0000 Hh:m0:s0" placeholder="dd/mm/yyyy hh:mm:ss"/>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Mixed types:</label>
+              <input class="form-control" mask="AAA 000-S0S" placeholder="AAA 000-S0S" />
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <label class="form-label">Prefix:</label>
+              <input class="form-control mb-4 mb-md-0" prefix="+7 " mask="(000) 000 00 00" [showMaskTyped] = "true" />
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Suffix (eg: $):</label>
+              <input class="form-control" suffix=" $" mask="0000" />
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <label class="form-label">Thousand separator:</label>
+              <input class="form-control mb-4 mb-md-0" mask="separator"/>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Dot separator:</label>
+              <input class="form-control mb-4 mb-md-0" mask="separator.2" thousandSeparator="." />
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <label class="form-label">Comma separator:</label>
+              <input class="form-control" mask="separator.2" thousandSeparator="," />
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Secure input:</label>
+              <input class="form-control mb-4 mb-md-0" [hiddenInput]="true" mask="XXX/X0/0000" placeholder="XXX/X0/0000"/>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

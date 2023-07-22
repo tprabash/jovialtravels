@@ -1,0 +1,171 @@
+<div class="row">
+  <div class="col-xl-10 main-content ps-xl-4 pe-xl-5">
+    <h1 class="page-title">Modal</h1>
+    <p class="lead">Add dialogs to your site for lightboxes, user notifications, or completely custom content. Read the <a href="https://ng-bootstrap.github.io/#/components/modal/examples" target="_blank">Official Ng-Bootstrap Documentation</a> for a full list of instructions and other options.</p>
+
+    <hr>
+
+    <h4 #basic>Basic example</h4>
+    <p class="mb-3">Toggle a working modal demo by clicking the button below.</p>
+    <div class="example">
+      <!-- Button trigger modal -->
+      <button class="btn btn-primary" (click)="openBasicModal(basicModal)">Launch demo modal</button>
+      <!-- Modal -->
+      <ng-template #basicModal let-modal>
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="btn-close" (click)="modal.close('by: close icon')" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Modal body</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" (click)="modal.close('by: close button')">Close</button>
+          <button type="button" class="btn btn-primary" (click)="modal.close('by: save button')">Save changes</button>
+        </div>
+      </ng-template>
+      <!-- Close result -->
+      <p *ngIf="basicModalCloseResult != ''" class="mt-2">{{basicModalCloseResult}}</p>
+    </div>
+    <app-code-preview [codeContent]="basicModalCode"></app-code-preview>
+    
+    <hr>
+
+    <h4 #scrolling>Scrolling long content</h4>
+    <p class="mb-3">When modals become too long for the user’s viewport or device.</p>
+    <div class="example">
+      <!-- Button trigger modal -->
+      <button class="btn btn-primary" (click)="openScrollableModal(scrollableModal)">Launch demo modal</button>
+      <!-- Modal -->
+      <ng-template #scrollableModal let-modal>
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="btn-close" (click)="modal.close('by: close icon')" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+          <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+          <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+          <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+          <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+          <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+          <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+          <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+          <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+          <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+          <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+          <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" (click)="modal.close('by: close button')">Close</button>
+          <button type="button" class="btn btn-primary" (click)="modal.close('by: save button')">Save changes</button>
+        </div>
+      </ng-template>
+    </div>
+    <app-code-preview [codeContent]="scrollableModalCode"></app-code-preview>
+
+    <hr>
+
+    <h4 #vCenter>Vertically centered</h4>
+    <div class="example">
+      <!-- Button trigger modal -->
+      <button class="btn btn-primary" (click)="openVerticalCenteredModal(verticalCenteredModal)">Launch demo modal</button>
+      <!-- Modal -->
+      <ng-template #verticalCenteredModal let-modal>
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="btn-close" (click)="modal.close('by: close icon')" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Modal body</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" (click)="modal.close('by: close button')">Close</button>
+          <button type="button" class="btn btn-primary" (click)="modal.close('by: save button')">Save changes</button>
+        </div>
+      </ng-template>
+    </div>
+    <app-code-preview [codeContent]="verticalCenteredModalCode"></app-code-preview>
+    
+    <hr>
+
+    <h4 #sizing>Optional sizes</h4>
+    <p class="mb-3">Extra large, large, small modals.</p>
+    <div class="example">
+      <!-- Button trigger xl modal -->
+      <button class="btn btn-primary" (click)="openXlModal(xlModal)">Extra large modal</button>
+      <!-- Xl Modal -->
+      <ng-template #xlModal let-modal>
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="btn-close" (click)="modal.close('by: close icon')" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Modal body</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" (click)="modal.close('by: close button')">Close</button>
+          <button type="button" class="btn btn-primary" (click)="modal.close('by: save button')">Save changes</button>
+        </div>
+      </ng-template>
+
+      <!-- Button trigger lg modal -->
+      <button class="btn btn-primary" (click)="openLgModal(lgModal)">Large modal</button>
+      <!-- Lg Modal -->
+      <ng-template #lgModal let-modal>
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="btn-close" (click)="modal.close('by: close icon')" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Modal body</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" (click)="modal.close('by: close button')">Close</button>
+          <button type="button" class="btn btn-primary" (click)="modal.close('by: save button')">Save changes</button>
+        </div>
+      </ng-template>
+
+      <!-- Button trigger sm modal -->
+      <button class="btn btn-primary" (click)="openSmModal(smModal)">Small modal</button>
+      <!-- Sm Modal -->
+      <ng-template #smModal let-modal>
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="btn-close" (click)="modal.close('by: close icon')" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Modal body</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" (click)="modal.close('by: close button')">Close</button>
+          <button type="button" class="btn btn-primary" (click)="modal.close('by: save button')">Save changes</button>
+        </div>
+      </ng-template>
+    </div>
+    <app-code-preview [codeContent]="optionalSizesModalCode"></app-code-preview>
+    
+  </div>
+  <div class="col-xl-2 content-nav-wrapper">
+    <ul class="nav content-nav d-flex flex-column">
+      <li class="nav-item">
+        <a (click)="scrollTo(basic)" class="nav-link">Basic example</a>
+      </li>
+      <li class="nav-item">
+        <a (click)="scrollTo(scrolling)" class="nav-link">Scrolling long content</a>
+      </li>
+      <li class="nav-item">
+        <a (click)="scrollTo(vCenter)" class="nav-link">Vertical centered</a>
+      </li>
+      <li class="nav-item">
+        <a (click)="scrollTo(sizing)" class="nav-link">Optional sizes</a>
+      </li>
+    </ul>
+  </div>
+</div>

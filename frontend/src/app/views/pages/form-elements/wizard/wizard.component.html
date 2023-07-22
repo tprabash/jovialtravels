@@ -1,0 +1,186 @@
+<nav class="page-breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a routerLink=".">Forms</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Wizard</li>
+  </ol>
+</nav>
+
+<div class="row">
+  <div class="col-md-12 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Angular-archwizard</h4>
+        <p class=“text-muted”>Read the <a href="https://github.com/madoar/angular-archwizard" target="_blank"> Official Angular-archwizard Documentation </a>for a full list of instructions and other options.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6 grid-margin">
+    <div class="card">
+      <div class="card-body">
+        <h6 class="card-title">Example</h6>
+
+        <aw-wizard>
+          <aw-wizard-step stepTitle="step 1">
+            <div class="row mb-3">
+              <label for="firstName1" class="col-sm-3 col-form-label">First name</label>
+              <div class="col-sm-9">
+                <input type="text" class="form-control" id="firstName1" placeholder="First name">
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="lastName1" class="col-sm-3 col-form-label">Last name</label>
+              <div class="col-sm-9">
+                <input type="text" class="form-control" id="lastName1" placeholder="Last name">
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="userName1" class="col-sm-3 col-form-label">User name</label>
+              <div class="col-sm-9">
+                <input type="text" class="form-control" id="userName1" placeholder="User name">
+              </div>
+            </div>
+            <div class="d-flex justify-content-center mt-2">
+              <button class="btn btn-primary" type="button" awNextStep>Continue</button>
+            </div>
+          </aw-wizard-step>
+          <aw-wizard-step stepTitle="step 2">
+            <div class="row mb-3">
+              <label for="email1" class="col-sm-3 col-form-label">Email</label>
+              <div class="col-sm-9">
+                <input type="email" class="form-control" id="email1" autocomplete="off" placeholder="Email">
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="mobileNumber1" class="col-sm-3 col-form-label">Mobile</label>
+              <div class="col-sm-9">
+                <input type="number" class="form-control" id="mobileNumber1" placeholder="Mobile number">
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="password1" class="col-sm-3 col-form-label">Password</label>
+              <div class="col-sm-9">
+                <input type="password" class="form-control" id="password1" autocomplete="off" placeholder="Password">
+              </div>
+            </div>
+            <div class="d-flex justify-content-center mt-2">
+              <button class="btn btn-secondary me-2" type="button" awPreviousStep>Back</button>
+              <button class="btn btn-primary" type="button" awNextStep>Continue</button>
+            </div>
+          </aw-wizard-step>
+
+          <aw-wizard-step stepTitle="finish">
+            <div class="text-center">
+              <i data-feather="check-circle" appFeatherIcon class="text-success mt-4 mb-2 icon-xxl"></i>
+              <h3 class="text-muted mb-3">Thank you !</h3>
+              <p class="w-75 mx-auto mb-4 text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut nulla nunc. Maecenas arcu sem, hendrerit a tempor quis, sagittis accumsan tellus. In hac habitasse platea dictumst</p>
+            </div>
+            <div class="d-flex justify-content-center mt-2">
+              <button class="btn btn-secondary me-2" type="button" awPreviousStep>Back</button>
+              <button class="btn btn-success" type="button" (click)="finishFunction()">Finish</button>
+            </div>
+          </aw-wizard-step>
+        </aw-wizard>
+
+      </div>
+    </div>
+  </div> <!-- col -->
+  <div class="col-md-6 grid-margin">
+    <div class="card">
+      <div class="card-body">
+        <h6 class="card-title">With form validation</h6>
+
+        <aw-wizard #wizardForm>
+          
+          <aw-wizard-step stepTitle="step 1">
+            <form (ngSubmit)="form1Submit()" [formGroup]="validationForm1">
+
+              <div class="row mb-3">
+                <label for="firstName" class="col-sm-3 col-form-label">First name</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" id="firstName" formControlName="firstName" 
+                  [ngClass]="{'is-invalid': isForm1Submitted && form1.firstName.errors}" placeholder="First name">
+                  <div *ngIf="isForm1Submitted && form1.firstName.errors?.required" class="invalid-feedback">
+                    Required
+                  </div>
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <label for="lastName" class="col-sm-3 col-form-label">Last name</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" id="lastName" formControlName="lastName" 
+                    [ngClass]="{'is-invalid': isForm1Submitted && form1.lastName.errors}" placeholder="Last name">
+                  <div *ngIf="isForm1Submitted && form1.lastName.errors?.required" class="invalid-feedback">
+                    Required
+                  </div>
+                </div>
+              </div>
+
+              <div class="row mb-3">
+                <label for="userName" class="col-sm-3 col-form-label">User name</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" id="userName" formControlName="userName" 
+                  [ngClass]="{'is-invalid': isForm1Submitted && form1.userName.errors}" placeholder="User name">
+                  <div *ngIf="isForm1Submitted && form1.userName.errors?.required" class="invalid-feedback">
+                    Required
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex justify-content-center mt-2">
+                <button class="btn btn-primary" type="submit">Continue</button>
+              </div>
+            </form>
+          </aw-wizard-step>
+
+          <aw-wizard-step stepTitle="step 2">
+            <form (ngSubmit)="form2Submit()" [formGroup]="validationForm2">
+              <div class="row mb-3">
+                <label for="email" class="col-sm-3 col-form-label">Email</label>
+                <div class="col-sm-9">
+                  <input type="email" class="form-control" id="email" formControlName="email"
+                  [ngClass]="{'is-invalid': isForm2Submitted && form2.email.errors}" placeholder="Email">
+                </div>
+              </div>
+              <div class="row mb-3">
+                <label for="mobileNumber" class="col-sm-3 col-form-label">Mobile</label>
+                <div class="col-sm-9">
+                  <input type="number" class="form-control" id="mobileNumber" formControlName="mobileNumber"
+                  [ngClass]="{'is-invalid': isForm2Submitted && form2.mobileNumber.errors}" placeholder="Mobile number">
+                </div>
+              </div>
+              <div class="row mb-3">
+                <label for="password" class="col-sm-3 col-form-label">Password</label>
+                <div class="col-sm-9">
+                  <input type="password" class="form-control" id="password" formControlName="password"
+                  [ngClass]="{'is-invalid': isForm2Submitted && form2.password.errors}" placeholder="Password">
+                </div>
+              </div>
+              <div class="d-flex justify-content-center mt-2">
+                <button class="btn btn-secondary me-2" type="button" awPreviousStep>Back</button>
+                <button class="btn btn-primary" type="submit">Continue</button>
+              </div>
+            </form>
+          </aw-wizard-step>
+
+          <aw-wizard-step stepTitle="finish">
+            <div class="text-center">
+              <i data-feather="check-circle" appFeatherIcon class="text-success mt-4 mb-2 icon-xxl"></i>
+              <h3 class="text-muted mb-3">Thank you !</h3>
+              <p class="w-75 mx-auto mb-4 text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut nulla nunc. Maecenas arcu sem, hendrerit a tempor quis, sagittis accumsan tellus. In hac habitasse platea dictumst</p>
+            </div>
+            <div class="d-flex justify-content-center mt-2">
+              <button class="btn btn-secondary me-2" type="button" awPreviousStep>Back</button>
+              <button class="btn btn-success" type="button" (click)="finishFunction()">Finish</button>
+            </div>
+          </aw-wizard-step>
+
+        </aw-wizard>
+
+      </div>
+    </div>
+  </div> <!-- col -->
+
+</div> <!-- row -->

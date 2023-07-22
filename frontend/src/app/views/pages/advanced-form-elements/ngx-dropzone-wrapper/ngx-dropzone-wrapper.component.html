@@ -1,0 +1,32 @@
+<nav class="page-breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a routerLink=".">Forms</a></li>
+    <li class="breadcrumb-item"><a routerLink=".">Advanced Elements</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Ngx-dropzone-wrapper</li>
+  </ol>
+</nav>
+
+<div class="row">
+  <div class="col-md-12 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Ngx-dropzone-wrapper</h4>
+        <p class=“text-muted”>Read the <a href="https://github.com/zefoy/ngx-dropzone-wrapper" target="_blank"> Official Ngx-dropzone-wrapper Documentation </a>for a full list of instructions and other options.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h6 class="card-title">Example</h6>
+
+        <div class="dropzone" [dropzone]="config" (error)="onUploadError($event)" (success)="onUploadSuccess($event)"></div>
+        <button class="btn btn-secondary mt-2 d-block ms-auto" (click)="resetDropzoneUploads()">Reset</button>
+
+      </div>
+    </div>
+  </div> <!-- col -->
+</div>

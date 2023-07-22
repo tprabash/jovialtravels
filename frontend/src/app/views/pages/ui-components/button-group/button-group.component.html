@@ -1,0 +1,231 @@
+<div class="row">
+  <div class="col-xl-10 main-content ps-xl-4 pe-xl-5">
+    <h1 class="page-title">Button group</h1>
+    <p class="lead">Group a series of buttons together on a single line or stack them in a vertical column. Read the <a href="https://getbootstrap.com/docs/5.2/components/button-group/" target="_blank">Official Bootstrap Documentation</a> for a full list of instructions and other options.</p>
+
+    <hr>
+
+    <h4 #default>Basic example</h4>
+    <p class="mb-3">Wrap a series of buttons with <code>.btn</code> in <code>.btn-group</code>.</p>
+    <div class="example">
+      <div class="btn-group" role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-primary">Left</button>
+        <button type="button" class="btn btn-primary">Middle</button>
+        <button type="button" class="btn btn-primary">Right</button>
+      </div>
+    </div>
+    <app-code-preview [codeContent]="defaultButtonGroupCode"></app-code-preview>
+    
+    <hr>
+
+    <h4 #checkboxRadio>Checkbox and radio button groups.</h4>
+    <p class="mb-3">Combine button-like checkbox and radio <a href="https://getbootstrap.com/docs/5.2/forms/checks-radios/" target="_blank">toggle buttons</a> into a seamless looking button group. <a href="https://ng-bootstrap.github.io/#/components/buttons/examples" target="_blank">more examples</a>.</p>
+    <div class="example">
+      <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+        <input type="checkbox" [(ngModel)]="modelCheckbox.left" class="btn-check" id="btncheck1" autocomplete="off">
+        <label class="btn btn-outline-primary" for="btncheck1">Left (pre-checked)</label>
+      
+        <input type="checkbox" [(ngModel)]="modelCheckbox.middle" class="btn-check" id="btncheck2" autocomplete="off">
+        <label class="btn btn-outline-primary" for="btncheck2">Middle</label>
+      
+        <input type="checkbox" [(ngModel)]="modelCheckbox.right" class="btn-check" id="btncheck3" autocomplete="off">
+        <label class="btn btn-outline-primary" for="btncheck3">Right</label>
+      </div>
+      <hr>
+      <pre>{{modelCheckbox | json}}</pre>
+    </div>
+    <app-code-preview [codeContent]="checkboxGroupCode"></app-code-preview>
+
+    <br>
+
+    <div class="example">
+      <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+        <input type="radio"  class="btn-check" [(ngModel)]="modelRadio" [value]="1" name="btnradio" id="btnradio1" autocomplete="off">
+        <label class="btn btn-outline-primary" for="btnradio1">Left (pre-checked)</label>
+      
+        <input type="radio" class="btn-check" [(ngModel)]="modelRadio" [value]="'middle'" name="btnradio" id="btnradio2" autocomplete="off">
+        <label class="btn btn-outline-primary" for="btnradio2">Middle</label>
+      
+        <input type="radio" class="btn-check" [(ngModel)]="modelRadio" [value]="false" name="btnradio" id="btnradio3" autocomplete="off">
+        <label class="btn btn-outline-primary" for="btnradio3">Right</label>
+      </div>
+      <hr>
+      <pre>{{modelRadio}}</pre>
+    </div>
+    <app-code-preview [codeContent]="radioGroupCode"></app-code-preview>
+    
+    <hr>
+
+    <h4 #toolbar>Button toolbar</h4>
+    <p class="mb-3">Combine sets of button groups into button toolbars for more complex components. Use utility classes as needed to space out groups, buttons, and more.</p>
+    <div class="example">
+      <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+        <div class="btn-group me-2 mb-1 mb-md-0" role="group" aria-label="First group">
+          <button type="button" class="btn btn-primary">1</button>
+          <button type="button" class="btn btn-primary">2</button>
+          <button type="button" class="btn btn-primary">3</button>
+          <button type="button" class="btn btn-primary">4</button>
+        </div>
+        <div class="btn-group me-2 mb-1 mb-md-0" role="group" aria-label="Second group">
+          <button type="button" class="btn btn-primary">5</button>
+          <button type="button" class="btn btn-primary">6</button>
+          <button type="button" class="btn btn-primary">7</button>
+        </div>
+        <div class="btn-group mb-1 mb-md-0" role="group" aria-label="Third group">
+          <button type="button" class="btn btn-primary">8</button>
+        </div>
+      </div>
+    </div>
+    <app-code-preview [codeContent]="buttonToolbarCode"></app-code-preview>
+
+    <p class="mb-3">Feel free to mix input groups with button groups in your toolbars. Similar to the example above, you’ll likely need some utilities though to space things properly.</p>
+    <div class="example">
+      <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
+        <div class="btn-group me-2 mb-1 mb-md-0" role="group" aria-label="First group">
+          <button type="button" class="btn btn-primary">1</button>
+          <button type="button" class="btn btn-primary">2</button>
+          <button type="button" class="btn btn-primary">3</button>
+          <button type="button" class="btn btn-primary">4</button>
+        </div>
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <div class="input-group-text" id="btnGroupAddon">@</div>
+          </div>
+          <input type="text" class="form-control" placeholder="Input group example" aria-label="Input group example" aria-describedby="btnGroupAddon">
+        </div>
+      </div>
+      <div class="btn-toolbar justify-content-between" role="toolbar" aria-label="Toolbar with button groups">
+        <div class="btn-group mb-1 mb-md-0" role="group" aria-label="First group">
+          <button type="button" class="btn btn-primary">1</button>
+          <button type="button" class="btn btn-primary">2</button>
+          <button type="button" class="btn btn-primary">3</button>
+          <button type="button" class="btn btn-primary">4</button>
+        </div>
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <div class="input-group-text" id="btnGroupAddon2">@</div>
+          </div>
+          <input type="text" class="form-control" placeholder="Input group example" aria-label="Input group example" aria-describedby="btnGroupAddon2">
+        </div>
+      </div>
+    </div>
+    <app-code-preview [codeContent]="mixedToolbarCode"></app-code-preview>
+
+    <hr>
+
+    <h4 #sizing>Sizing</h4>
+    <p class="mb-3">Instead of applying button sizing classes to every button in a group, just add <code>.btn-group-*</code> to each <code>.btn-group</code>, including each one when nesting multiple groups.</p>
+    <div class="example">
+      <div class="btn-group btn-group-lg mb-1 mb-md-0" role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-primary">Left</button>
+        <button type="button" class="btn btn-primary">Middle</button>
+        <button type="button" class="btn btn-primary">Right</button>
+      </div>
+      <div class="btn-group mb-1 mb-md-0" role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-primary">Left</button>
+        <button type="button" class="btn btn-primary">Middle</button>
+        <button type="button" class="btn btn-primary">Right</button>
+      </div>
+      <div class="btn-group btn-group-sm mb-1 mb-md-0" role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-primary">Left</button>
+        <button type="button" class="btn btn-primary">Middle</button>
+        <button type="button" class="btn btn-primary">Right</button>
+      </div>
+    </div>
+    <app-code-preview [codeContent]="buttonGroupSizingCode"></app-code-preview>
+    
+    <hr>
+
+    <h4 #nesting>Nesting</h4>
+    <p class="mb-3">Place a <code>.btn-group</code> within another <code>.btn-group</code> when you want dropdown menus mixed with a series of buttons.</p>
+    <div class="example">
+      <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+        <button type="button" class="btn btn-primary">1</button>
+        <button type="button" class="btn btn-primary">2</button>
+      
+        <div class="btn-group" role="group" ngbDropdown>
+          <button id="btnGroupDrop1" type="button" ngbDropdownToggle class="btn btn-primary">
+            Dropdown
+          </button>
+          <div ngbDropdownMenu aria-labelledby="btnGroupDrop1">
+            <a ngbDropdownItem href="" (click)="false">Dropdown link</a>
+            <a ngbDropdownItem href="" (click)="false">Dropdown link</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <app-code-preview [codeContent]="buttonGroupNestingCode"></app-code-preview>
+    
+    <hr>
+
+    <h4 #vertical>Vertical variation</h4>
+    <p class="mb-3">Make a set of buttons appear vertically stacked rather than horizontally. Split button dropdowns are not supported here.</p>
+    <div class="example">
+      <div class="btn-group-vertical me-1" role="group" aria-label="Vertical button group">
+        <button type="button" class="btn btn-primary">Button</button>
+        <button type="button" class="btn btn-primary">Button</button>
+        <button type="button" class="btn btn-primary">Button</button>
+        <button type="button" class="btn btn-primary">Button</button>
+        <button type="button" class="btn btn-primary">Button</button>
+        <button type="button" class="btn btn-primary">Button</button>
+      </div>
+      <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+        <button type="button" class="btn btn-secondary">Button</button>
+        <div class="btn-group" role="group" ngbDropdown>
+          <button id="btnGroupVerticalDrop1" type="button" class="btn btn-secondary" ngbDropdownToggle>
+            Dropdown
+          </button>
+          <div ngbDropdownMenu aria-labelledby="btnGroupVerticalDrop1">
+            <a ngbDropdownItem href="" (click)="false">Dropdown link</a>
+            <a ngbDropdownItem href="" (click)="false">Dropdown link</a>
+          </div>
+        </div>
+        <button type="button" class="btn btn-secondary">Button</button>
+        <button type="button" class="btn btn-secondary">Button</button>
+        <div class="btn-group" role="group" ngbDropdown>
+          <button id="btnGroupVerticalDrop3" type="button" class="btn btn-secondary" ngbDropdownToggle>
+            Dropdown
+          </button>
+          <div ngbDropdownMenu aria-labelledby="btnGroupVerticalDrop3">
+            <a ngbDropdownItem href="" (click)="false">Dropdown link</a>
+            <a ngbDropdownItem href="" (click)="false">Dropdown link</a>
+          </div>
+        </div>
+        <div class="btn-group" role="group" ngbDropdown>
+          <button id="btnGroupVerticalDrop4" type="button" class="btn btn-secondary" ngbDropdownToggle>
+            Dropdown
+          </button>
+          <div ngbDropdownMenu aria-labelledby="btnGroupVerticalDrop4">
+            <a ngbDropdownItem href="" (click)="false">Dropdown link</a>
+            <a ngbDropdownItem href="" (click)="false">Dropdown link</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <app-code-preview [codeContent]="verticalVariationCode"></app-code-preview>
+    
+  </div>
+  <div class="col-xl-2 content-nav-wrapper">
+    <ul class="nav content-nav d-flex flex-column">
+      <li class="nav-item">
+        <a (click)="scrollTo(default)" class="nav-link">Basic example</a>
+      </li>
+      <li class="nav-item">
+        <a (click)="scrollTo(checkboxRadio)" class="nav-link">Checkbox and radio</a>
+      </li>
+      <li class="nav-item">
+        <a (click)="scrollTo(toolbar)" class="nav-link">Button toolbar</a>
+      </li>
+      <li class="nav-item">
+        <a (click)="scrollTo(sizing)" class="nav-link">Sizing</a>
+      </li>
+      <li class="nav-item">
+        <a (click)="scrollTo(nesting)" class="nav-link">Nesting</a>
+      </li>
+      <li class="nav-item">
+        <a (click)="scrollTo(vertical)" class="nav-link">Vertical variations</a>
+      </li>
+      
+    </ul>
+  </div>
+</div>

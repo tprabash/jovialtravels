@@ -1,0 +1,123 @@
+<div class="row">
+  <div class="col-xl-10 main-content ps-xl-4 pe-xl-5">
+    <h1 class="page-title">Carousel</h1>
+    <p class="lead">A slideshow component for cycling through elements—images or slides of text—like a carousel. Read the <a href="https://ng-bootstrap.github.io/#/components/carousel/examples" target="_blank">Official Ng-Bootstrap Documentation</a> for a full list of instructions and other options.</p>
+    
+    <hr>
+    
+    <h4 #slidesOnly>Slides only</h4>
+    <p class="mb-3">Here’s a carousel with slides only. Note the presence of the <code>.d-block</code> and <code>.w-100</code> on carousel images to prevent browser default image alignment.</p>
+    <div class="example">
+      <ngb-carousel *ngIf="images" [showNavigationArrows]="false" [showNavigationIndicators]="false">
+        <ng-template ngbSlide *ngFor="let image of images">
+          <div class="picsum-img-wrapper">
+            <img [src]="image" class="d-block w-100" alt="Random slide">
+          </div>
+        </ng-template>
+      </ngb-carousel>
+    </div>
+    <app-code-preview [codeContent]="slidesOnlyCode"></app-code-preview>
+    
+    <hr>
+
+    <h4 #withControls>With controls</h4>
+    <p class="mb-3">Adding in the previous and next controls:</p>
+    <div class="example">
+      <ngb-carousel *ngIf="images" [showNavigationArrows]="true" [showNavigationIndicators]="false">
+        <ng-template ngbSlide *ngFor="let image of images">
+          <div class="picsum-img-wrapper">
+            <img [src]="image" class="d-block w-100" alt="Random slide">
+          </div>
+        </ng-template>
+      </ngb-carousel>
+    </div>
+    <app-code-preview [codeContent]="widthControlsCode"></app-code-preview>
+    
+    <hr>
+
+    <h4 #withIndicators>With indicators</h4>
+    <p class="mb-3">You can also add the indicators to the carousel, alongside the controls, too.</p>
+    <div class="example">
+      <ngb-carousel *ngIf="images" [showNavigationArrows]="true" [showNavigationIndicators]="true">
+        <ng-template ngbSlide *ngFor="let image of images">
+          <div class="picsum-img-wrapper">
+            <img [src]="image" class="d-block w-100" alt="Random slide">
+          </div>
+        </ng-template>
+      </ngb-carousel>
+    </div>
+    <app-code-preview [codeContent]="widthIndicatorsCode"></app-code-preview>
+    
+    <hr>
+
+    <h4 #withCaptions>With captions</h4>
+    <p class="mb-3">Add captions to your slides easily with the <code>.carousel-caption</code> element within any <code>.carousel-item</code>. They can be easily hidden on smaller viewports, as shown below, with optional <a href="https://getbootstrap.com/docs/5.2/utilities/display/" target="_blank">display utilities</a>. We hide them initially with <code>.d-none</code> and bring them back on medium-sized devices with <code>.d-md-block</code>.</p>
+    <div class="example">
+      <ngb-carousel *ngIf="images" [showNavigationArrows]="true" [showNavigationIndicators]="true">
+        <ng-template ngbSlide>
+          <div class="picsum-img-wrapper">
+            <img [src]="images[0]" class="d-block w-100" alt="Random first slide">
+          </div>
+          <div class="carousel-caption">
+            <h5>First slide label</h5>
+            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          </div>
+        </ng-template>
+        <ng-template ngbSlide>
+          <div class="picsum-img-wrapper">
+            <img [src]="images[1]" class="d-block w-100" alt="Random second slide">
+          </div>
+          <div class="carousel-caption">
+            <h5>Second slide label</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </div>
+        </ng-template>
+        <ng-template ngbSlide>
+          <div class="picsum-img-wrapper">
+            <img [src]="images[2]" class="d-block w-100" alt="Random third slide">
+          </div>
+          <div class="carousel-caption">
+            <h5>Third slide label</h5>
+            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+          </div>
+        </ng-template>
+      </ngb-carousel>
+    </div>
+    <app-code-preview [codeContent]="widthCaptionsCode"></app-code-preview>
+    
+    <hr>
+
+    <h4 #crossfade>Crossfade</h4>
+    <p class="mb-3">Add <code>.carousel-fade</code> class to your <code>ngb-carousel</code> to animate slides with a fade transition instead of a slide.</p>
+    <div class="example">
+      <ngb-carousel *ngIf="images" class="carousel-fade" [showNavigationArrows]="true" [showNavigationIndicators]="true">
+        <ng-template ngbSlide *ngFor="let image of images">
+          <div class="picsum-img-wrapper">
+            <img [src]="image" class="d-block w-100" alt="Random slide">
+          </div>
+        </ng-template>
+      </ngb-carousel>
+    </div>
+    <app-code-preview [codeContent]="crossfadeCarouselCode"></app-code-preview>
+    
+  </div>
+  <div class="col-xl-2 content-nav-wrapper">
+    <ul class="nav content-nav d-flex flex-column">
+      <li class="nav-item">
+        <a (click)="scrollTo(slidesOnly)" class="nav-link">Slides only</a>
+      </li>
+      <li class="nav-item">
+        <a (click)="scrollTo(withControls)" class="nav-link">With controls</a>
+      </li>
+      <li class="nav-item">
+        <a (click)="scrollTo(withIndicators)" class="nav-link">With indicators</a>
+      </li>
+      <li class="nav-item">
+        <a (click)="scrollTo(withCaptions)" class="nav-link">With captions</a>
+      </li>
+      <li class="nav-item">
+        <a (click)="scrollTo(crossfade)" class="nav-link">Crossfade</a>
+      </li>
+    </ul>
+  </div>
+</div>

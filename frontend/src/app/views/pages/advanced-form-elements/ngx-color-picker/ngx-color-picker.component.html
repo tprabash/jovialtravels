@@ -1,0 +1,155 @@
+<nav class="page-breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a routerLink=".">Forms</a></li>
+    <li class="breadcrumb-item"><a routerLink=".">Advanced Elements</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Ngx-color-picker</li>
+  </ol>
+</nav>
+
+<div class="row">
+  <div class="col-md-12 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Ngx-color-picker</h4>
+        <p class=“text-muted”>Read the <a href="https://github.com/zefoy/ngx-color-picker" target="_blank"> Official Ngx-color-picker Documentation </a>for a full list of instructions and other options.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h6 class="card-title">Simple example</h6>
+
+        <input class="form-control wd-150" 
+          [(colorPicker)]="color1" 
+          [style.background]="color1"/>
+        
+        <p class="text-muted mt-2">Value: {{color1}}</p>
+
+      </div>
+    </div>
+  </div> <!-- col -->
+  <div class="col-md-6 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h6 class="card-title">Grayscale color mode</h6>
+
+        <input class="form-control wd-150" 
+          [(colorPicker)]="grayscaleColor" 
+          [cpColorMode]="'grayscale'"
+          [style.background]="grayscaleColor"/>
+        
+        <p class="text-muted mt-2">Value: {{grayscaleColor}}</p>
+
+      </div>
+    </div>
+  </div> <!-- col -->
+  <div class="col-md-6 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h6 class="card-title">Show the color in the input field</h6>
+
+        <input class="form-control wd-150"
+          [value]="color2"
+          [style.background]="color2"
+          [(colorPicker)]="color2"/>
+        
+        <p class="text-muted mt-2">Value: {{color2}}</p>
+
+      </div>
+    </div>
+  </div> <!-- col -->
+  <div class="col-md-6 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h6 class="card-title">Output format</h6>
+        <div class="row">
+          <div class="col-md-6">
+            <input class="form-control wd-150"
+            [style.background]="color3"
+            [cpOutputFormat]="'rgba'"
+            [(colorPicker)]="color3"/>
+          
+            <p class="text-muted mt-2">Value: {{color3}}</p>
+          </div>
+          <div class="col-md-6">
+            <input class="form-control wd-150"
+            [style.background]="color4"
+            [cpOutputFormat]="'hsla'"
+            [(colorPicker)]="color4"/>
+          
+            <p class="text-muted mt-2">Value: {{color4}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> <!-- col -->
+  <div class="col-md-6 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h6 class="card-title">Changing dialog position</h6>
+
+        <input class="form-control wd-150"
+          [style.background]="color5"
+          [cpPosition]="'top-right'"
+          [(colorPicker)]="color5"/>
+        
+        <p class="text-muted mt-2">Value: {{color5}}</p>
+
+      </div>
+    </div>
+  </div> <!-- col -->
+  <div class="col-md-6 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h6 class="card-title">HTML element</h6>
+
+        <h4 class="d-inline-block fw-bolder"
+          [style.color]="color6"
+          [(colorPicker)]="color6"> Click to change me </h4>
+        
+        <p class="text-muted mt-2">Value: {{color6}}</p>
+
+      </div>
+    </div>
+  </div> <!-- col -->
+  <div class="col-md-6 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h6 class="card-title">Ok and Cancel buttons</h6>
+
+        <input class="form-control wd-150"
+          [style.background]="color7"
+          [cpCancelButton]="true"
+          [cpCancelButtonClass]= "'btn btn-danger btn-xs'"
+          [cpOKButton]="true"
+          [cpOKButtonClass]= "'btn btn-primary btn-xs'"
+          [cpSaveClickOutside]="false"
+          [cpPosition]="'top-right'"
+          [(colorPicker)]="color7"/>
+        
+        <p class="text-muted mt-2">Value: {{color7}}</p>
+
+      </div>
+    </div>
+  </div> <!-- col -->
+  <div class="col-md-6 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h6 class="card-title">With preset colors</h6>
+
+        <input class="form-control wd-150"
+          [style.background]="color8"
+          [cpPosition]="'top-right'"
+          [cpPresetColors]="['#727cf5', '#7987a1', '#10b759', '#66d1d1', '#fbbc06', '#ff3366']"
+          [(colorPicker)]="color8"/>
+        
+        <p class="text-muted mt-2">Value: {{color8}}</p>
+
+      </div>
+    </div>
+  </div> <!-- col -->
+</div> <!-- row -->

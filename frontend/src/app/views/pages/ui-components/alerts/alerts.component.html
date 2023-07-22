@@ -1,0 +1,207 @@
+<div class="row">
+  <div class="col-xl-10 main-content ps-xl-4 pe-xl-5">
+    <h1 class="page-title">Alerts</h1>
+    <p class="lead">Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages. Read the <a href="https://ng-bootstrap.github.io/#/components/alert/examples" target="_blank">Official Ng-Bootstrap Documentation</a> for a full list of instructions and other options.</p>
+
+    <hr>
+
+    <h4 #default>Basic example</h4>
+    <div class="example">
+      <ngb-alert [dismissible]="false" [type]="'primary'">
+        A simple primary alert—check it out!
+      </ngb-alert>
+      <ngb-alert [dismissible]="false" [type]="'secondary'">
+        A simple primary alert—check it out!
+      </ngb-alert>
+      <ngb-alert [dismissible]="false" [type]="'success'">
+        A simple primary alert—check it out!
+      </ngb-alert>
+      <ngb-alert [dismissible]="false" [type]="'danger'">
+        A simple primary alert—check it out!
+      </ngb-alert>
+      <ngb-alert [dismissible]="false" [type]="'warning'">
+        A simple primary alert—check it out!
+      </ngb-alert>
+      <ngb-alert [dismissible]="false" [type]="'info'">
+        A simple primary alert—check it out!
+      </ngb-alert>
+      <ngb-alert [dismissible]="false" [type]="'light'">
+        A simple primary alert—check it out!
+      </ngb-alert>
+      <ngb-alert [dismissible]="false" [type]="'dark'">
+        A simple primary alert—check it out!
+      </ngb-alert>
+    </div>
+    <app-code-preview [codeContent]="defaultAlertCode"></app-code-preview>
+    
+    <hr>
+    
+    <h4 #fill>Fill alert</h4>
+    <div class="example">
+      <ngb-alert [dismissible]="false" [type]="'fill-primary'">
+        A simple primary alert—check it out!
+      </ngb-alert>
+      <ngb-alert [dismissible]="false" [type]="'fill-secondary'">
+        A simple primary alert—check it out!
+      </ngb-alert>
+      <ngb-alert [dismissible]="false" [type]="'fill-success'">
+        A simple primary alert—check it out!
+      </ngb-alert>
+      <ngb-alert [dismissible]="false" [type]="'fill-danger'">
+        A simple primary alert—check it out!
+      </ngb-alert>
+      <ngb-alert [dismissible]="false" [type]="'fill-warning'">
+        A simple primary alert—check it out!
+      </ngb-alert>
+      <ngb-alert [dismissible]="false" [type]="'fill-info'">
+        A simple primary alert—check it out!
+      </ngb-alert>
+      <ngb-alert [dismissible]="false" [type]="'fill-light'">
+        A simple primary alert—check it out!
+      </ngb-alert>
+      <ngb-alert [dismissible]="false" [type]="'fill-dark'">
+        A simple primary alert—check it out!
+      </ngb-alert>
+    </div>
+    <app-code-preview [codeContent]="fillAlertCode"></app-code-preview>
+
+    <hr>
+    
+    <h4 #icon>With icon</h4>
+    <div class="example">
+      <ngb-alert [dismissible]="false" [type]="'primary'">
+        <i class="feather icon-alert-circle"></i>
+        A simple primary alert—check it out!
+      </ngb-alert>
+      <ngb-alert [dismissible]="false" [type]="'secondary'">
+        <i class="feather icon-alert-triangle"></i>
+        A simple primary alert—check it out!
+      </ngb-alert>
+      <ngb-alert [dismissible]="false" [type]="'success'">
+        <i class="feather icon-alert-octagon"></i>
+        A simple primary alert—check it out!
+      </ngb-alert>
+      <ngb-alert [dismissible]="false" [type]="'danger'">
+        <i class="feather icon-moon"></i>
+        A simple primary alert—check it out!
+      </ngb-alert>
+      <ngb-alert [dismissible]="false" [type]="'warning'">
+        <i class="feather icon-help-circle"></i>
+        A simple primary alert—check it out!
+      </ngb-alert>
+      <ngb-alert [dismissible]="false" [type]="'info'">
+        <i class="feather icon-sun"></i>
+        A simple primary alert—check it out!
+      </ngb-alert>
+      <ngb-alert [dismissible]="false" [type]="'light'">
+        <i class="feather icon-info"></i>
+        A simple primary alert—check it out!
+      </ngb-alert>
+      <ngb-alert [dismissible]="false" [type]="'dark'">
+        <i class="feather icon-alert-circle"></i>
+        A simple primary alert—check it out!
+      </ngb-alert>
+    </div>
+    <app-code-preview [codeContent]="iconAlertCode"></app-code-preview>
+    
+    <hr>
+    
+    <h4 #alertLink >Alert Link</h4>
+    <p class="mb-3">Use the <code>.alert-link</code> utility class to quickly provide matching colored links within any alert.</p>
+    <div class="example">
+      <ngb-alert [dismissible]="false" [type]="'primary'">
+        A simple primary alert with <a href="" (click)="false" class="alert-link">an example link</a>. Give it a click if you like.
+      </ngb-alert>
+      <ngb-alert [dismissible]="false" [type]="'secondary'">
+        A simple secondary alert with <a href="" (click)="false" class="alert-link">an example link</a>. Give it a click if you like.
+      </ngb-alert>
+      <ngb-alert [dismissible]="false" [type]="'success'">
+        A simple success alert with <a href="" (click)="false" class="alert-link">an example link</a>. Give it a click if you like.
+      </ngb-alert>
+      <ngb-alert [dismissible]="false" [type]="'danger'">
+        A simple danger alert with <a href="" (click)="false" class="alert-link">an example link</a>. Give it a click if you like.
+      </ngb-alert>
+      <ngb-alert [dismissible]="false" [type]="'warning'">
+        A simple warning alert with <a href="" (click)="false" class="alert-link">an example link</a>. Give it a click if you like.
+      </ngb-alert>
+      <ngb-alert [dismissible]="false" [type]="'info'">
+        A simple info alert with <a href="" (click)="false" class="alert-link">an example link</a>. Give it a click if you like.
+      </ngb-alert>
+      <ngb-alert [dismissible]="false" [type]="'light'">
+        A simple light alert with <a href="" (click)="false" class="alert-link">an example link</a>. Give it a click if you like.
+      </ngb-alert>
+      <ngb-alert [dismissible]="false" [type]="'dark'">
+        A simple dark alert with <a href="" (click)="false" class="alert-link">an example link</a>. Give it a click if you like.
+      </ngb-alert>
+    </div>
+    <app-code-preview [codeContent]="linkAlertCode"></app-code-preview>
+    
+    <hr>
+    
+    <h4 #additionalContent>Additional content</h4>
+    <p class="mb-3">Alerts can also contain additional HTML elements like headings, paragraphs and dividers.</p>
+    <div class="example">
+      <ngb-alert [dismissible]="false" [type]="'success'">
+        <h4 class="alert-heading">Well done!</h4>
+        <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+        <hr>
+        <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+      </ngb-alert>
+    </div>
+    <app-code-preview [codeContent]="additionalContentAlertCode"></app-code-preview>
+
+    <hr>
+
+    <h4 #dismissing>Dismissing</h4>
+    <div class="example">
+<ngb-alert [type]="'primary'" *ngIf="!alert1closed" (close)="alert1closed=true">
+  <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+</ngb-alert>
+      <ngb-alert [type]="'secondary'" *ngIf="!alert2closed" (close)="alert2closed=true">
+        <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+      </ngb-alert>
+      <ngb-alert [type]="'success'" *ngIf="!alert3closed" (close)="alert3closed=true">
+        <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+      </ngb-alert>
+      <ngb-alert [type]="'danger'" *ngIf="!alert4closed" (close)="alert4closed=true">
+        <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+      </ngb-alert>
+      <ngb-alert [type]="'warning'" *ngIf="!alert5closed" (close)="alert5closed=true">
+        <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+      </ngb-alert>
+      <ngb-alert [type]="'info'" *ngIf="!alert6closed" (close)="alert6closed=true">
+        <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+      </ngb-alert>
+      <ngb-alert [type]="'light'" *ngIf="!alert7closed" (close)="alert7closed=true">
+        <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+      </ngb-alert>
+      <ngb-alert [type]="'dark'" *ngIf="!alert8closed" (close)="alert8closed=true">
+        <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+      </ngb-alert>
+    </div>
+    <app-code-preview [codeContent]="dismissingAlertCode"></app-code-preview>
+
+  </div>
+  <div class="col-xl-2 content-nav-wrapper">
+    <ul class="nav content-nav d-flex flex-column">
+      <li class="nav-item">
+        <a (click)="scrollTo(default)" class="nav-link">Basic example</a>
+      </li>
+      <li class="nav-item">
+        <a (click)="scrollTo(fill)" class="nav-link">Fill alerts</a>
+      </li>
+      <li class="nav-item">
+        <a (click)="scrollTo(icon)" class="nav-link">Icon alerts</a>
+      </li>
+      <li class="nav-item">
+        <a (click)="scrollTo(alertLink)" class="nav-link">Alert link</a>
+      </li>
+      <li class="nav-item">
+        <a (click)="scrollTo(additionalContent)" class="nav-link">Additional content</a>
+      </li>
+      <li class="nav-item">
+        <a (click)="scrollTo(dismissing)" class="nav-link">Dismissing</a>
+      </li>
+    </ul>
+  </div>
+</div>

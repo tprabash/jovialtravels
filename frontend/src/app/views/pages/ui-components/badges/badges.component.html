@@ -1,0 +1,121 @@
+<div class="row">
+  <div class="col-xl-10 main-content ps-xl-4 pe-xl-5">
+    <h1 class="page-title">Badges</h1>
+    <p class="lead">Documentation and examples for badges, our small count and labeling component. Read the <a href="https://getbootstrap.com/docs/5.2/components/badge/" target="_blank">Official Bootstrap Documentation</a> for a full list of instructions and other options.</p>
+
+    <hr>
+
+    <h4 #default>Basic example</h4>
+    <p class="mb-3">Badges scale to match the size of the immediate parent element by using relative font sizing and <code>em</code> units.</p>
+    <div class="example">
+      <h1 class="mb-2">Example heading <span class="badge bg-primary">New</span></h1>
+      <h2 class="mb-2">Example heading <span class="badge bg-primary">New</span></h2>
+      <h3 class="mb-2">Example heading <span class="badge bg-primary">New</span></h3>
+      <h4 class="mb-2">Example heading <span class="badge bg-primary mb-1">New</span></h4>
+      <h5 class="mb-2">Example heading <span class="badge bg-primary mb-1">New</span></h5>
+      <h6 class="mb-2">Example heading <span class="badge bg-primary">New</span></h6>
+    </div>
+    <app-code-preview [codeContent]="defaultBadgeCode"></app-code-preview>
+
+    <hr>
+
+    <h4 id="buttons">Buttons</h4>
+    <p class="mb-3">Badges can be used as part of links or buttons to provide a counter.</p>
+    <div class="example">
+      <button type="button" class="btn btn-primary">
+          Notifications <span class="badge bg-light text-dark">4</span>
+      </button>
+    </div>
+    <app-code-preview [codeContent]="buttonBadgeCode"></app-code-preview>
+
+    <hr>
+
+    <h4 #positioned>Positioned</h4>
+    <p class="mb-3">Use utilities to modify a <code>.badge</code> and position it in the corner of a link or button.</p>
+    <div class="example">
+      <button type="button" class="btn btn-primary position-relative">
+        Inbox
+        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+          99+
+          <span class="visually-hidden">unread messages</span>
+        </span>
+      </button>
+    </div>
+    <app-code-preview [codeContent]="positionedBadgeCode"></app-code-preview>
+
+    <p class="my-3">You can also replace the <code>.badge</code> class with a few more utilities without a count for a more generic indicator.</p>
+    <div class="example">
+      <button type="button" class="btn btn-primary position-relative">
+        Profile
+        <span class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle">
+          <span class="visually-hidden">New alerts</span>
+        </span>
+      </button>
+    </div>
+    <app-code-preview [codeContent]="positionedIndicatorBadgeCode"></app-code-preview>
+
+    <hr>
+
+    <h4 #contextualVariations>Contextual variations</h4>
+    <p class="mb-3">Use background utility classes to quickly change the appearance of a badge.</p>
+    <div class="example">
+      <span class="badge bg-primary">Primary</span>
+      <span class="badge bg-secondary">Secondary</span>
+      <span class="badge bg-success">Success</span>
+      <span class="badge bg-danger">Danger</span>
+      <span class="badge bg-warning">Warning</span>
+      <span class="badge bg-info">Info</span>
+      <span class="badge bg-light text-dark">Light</span>
+      <span class="badge bg-dark">Dark</span>
+    </div>
+    <app-code-preview [codeContent]="contextualVariationsCode"></app-code-preview>
+
+    <hr>
+
+    <h4 #pillBadges>Pill badges</h4>
+    <p class="mb-3">Use the <code>.rounded-pill</code> utility class to make badges more rounded with a larger <code>border-radius</code>.</p>
+    <div class="example">
+      <span class="badge rounded-pill bg-primary">Primary</span>
+      <span class="badge rounded-pill bg-secondary">Secondary</span>
+      <span class="badge rounded-pill bg-success">Success</span>
+      <span class="badge rounded-pill bg-danger">Danger</span>
+      <span class="badge rounded-pill bg-warning">Warning</span>
+      <span class="badge rounded-pill bg-info">Info</span>
+      <span class="badge rounded-pill bg-light text-dark">Light</span>
+      <span class="badge rounded-pill bg-dark">Dark</span>
+    </div>
+    <app-code-preview [codeContent]="pillBadgeCode"></app-code-preview>
+
+    <hr>
+
+    <h4 #linkBadges>Link badges</h4>
+    <div class="example">
+      <a href="" (click)="false" class="badge bg-primary">Primary</a>
+      <a href="" (click)="false" class="badge bg-secondary">Secondary</a>
+      <a href="" (click)="false" class="badge bg-success">Success</a>
+      <a href="" (click)="false" class="badge bg-danger">Danger</a>
+      <a href="" (click)="false" class="badge bg-warning">Warning</a>
+      <a href="" (click)="false" class="badge bg-info">Info</a>
+      <a href="" (click)="false" class="badge bg-light text-dark">Light</a>
+      <a href="" (click)="false" class="badge bg-dark">Dark</a>
+    </div>
+    <app-code-preview [codeContent]="linkBadgeCode"></app-code-preview>
+
+  </div>
+  <div class="col-xl-2 content-nav-wrapper">
+    <ul class="nav content-nav d-flex flex-column">
+      <li class="nav-item">
+        <a (click)="scrollTo(default)" class="nav-link">Basic example</a>
+      </li>
+      <li class="nav-item">
+        <a (click)="scrollTo(contextualVariations)" class="nav-link">Contextual variations</a>
+      </li>
+      <li class="nav-item">
+        <a (click)="scrollTo(pillBadges)" class="nav-link">Pill badges</a>
+      </li>
+      <li class="nav-item">
+        <a (click)="scrollTo(linkBadges)" class="nav-link">Link badges</a>
+      </li>
+    </ul>
+  </div>
+</div>

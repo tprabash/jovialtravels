@@ -1,0 +1,155 @@
+<nav class="page-breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a routerLink=".">Forms</a></li>
+    <li class="breadcrumb-item"><a routerLink=".">Advanced Elements</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Form Validation</li>
+  </ol>
+</nav>
+
+<div class="row">
+  <div class="col-md-12 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Form Validation</h4>
+        <p class=“text-muted”>Read the <a href="https://github.com/rsaenen/ngx-custom-validators" target="_blank"> Official Ngx-custom-validators Documentation </a>for a full list of instructions and other options.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<form novalidate>
+  <div class="row">
+    <div class="col-lg-6 grid-margin stretch-card">
+      <div class="card">
+        <div class="card-body">
+          <div class="mb-3">
+            <label for="exampleInputUsername1" class="form-label">Required</label>
+            <input class="form-control" type="text" placeholder="required" ngModel name="requried" #requried="ngModel" required/>
+            <p class="text-danger mt-1" *ngIf="requried?.errors?.required">required error</p>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputUsername1" class="form-label">Minimum Length</label>
+            <input class="form-control" type="text" placeholder="minimum length: 5" ngModel name="minlength" #minlength="ngModel" minlength="5"/>
+            <p class="text-danger mt-1" *ngIf="minlength?.errors?.minlength">minlength error</p>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputUsername1" class="form-label">Maximum Length</label>
+            <input class="form-control" type="text" placeholder="maximum length: 5" ngModel name="maxlength" #maxlength="ngModel" maxlength="5"/>
+            <p class="text-danger mt-1" *ngIf="maxlength?.errors?.maxlength">maxlength error</p>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputUsername1" class="form-label">Pattern</label>
+            <input class="form-control" type="text" placeholder="pattern: [a-z]{6}" ngModel name="pattern" #pattern="ngModel" pattern="[a-z]{6}"/>
+            <p class="text-danger mt-1" *ngIf="pattern?.errors?.pattern">pattern error</p>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputUsername1" class="form-label">Base64</label>
+            <input class="form-control" type="text" placeholder="base64" ngModel name="base64" #base64="ngModel" base64/>
+            <p class="text-danger mt-1" *ngIf="base64?.errors?.base64">base64 error</p>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputUsername1" class="form-label">Date</label>
+            <input class="form-control" type="text" placeholder="date" ngModel name="date" #date="ngModel" date/>
+            <p class="text-danger mt-1" *ngIf="date?.errors?.date">date error</p>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputUsername1" class="form-label">Date ISO</label>
+            <input class="form-control" type="text" placeholder="date ISO" ngModel name="dateISO" #dateISO="ngModel" dateISO/>
+            <p class="text-danger mt-1" *ngIf="dateISO?.errors?.dateISO">dateISO error</p>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputUsername1" class="form-label">Digits</label>
+            <input class="form-control" type="text" placeholder="digits" ngModel name="digits" #digits="ngModel" digits/>
+            <p class="text-danger mt-1" *ngIf="digits?.errors?.digits">digits error</p>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputUsername1" class="form-label">Email</label>
+            <input class="form-control" type="text" placeholder="email" ngModel name="email" #email="ngModel" ngvemail/>
+            <p class="text-danger mt-1" *ngIf="email?.errors?.email">email error</p>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputUsername1" class="form-label">Equal</label>
+            <input class="form-control" type="text" placeholder="should be equlal to 'aabbcc'" ngModel name="equal" #equal="ngModel" [equal]="'aabbcc'"/>
+            <p class="text-danger mt-1" *ngIf="equal?.errors?.equal">equal error</p>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputUsername1" class="form-label">Not Equal</label>
+            <input class="form-control" type="text" placeholder="shouldn't be equal to 'aabbcc'" ngModel name="notEqual" #notEqual="ngModel" [notEqual]="'aabbcc'"/>
+            <p class="text-danger mt-1" *ngIf="notEqual?.errors?.notEqual">notEqual error</p>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputUsername1" class="form-label">Credit Card</label>
+            <input class="form-control" type="text" placeholder="credit card" ngModel name="creditCard" #creditCard="ngModel" creditCard/>
+            <p class="text-danger mt-1" *ngIf="creditCard?.errors?.creditCard">creditCard error</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6 grid-margin stretch-card">
+      <div class="card">
+        <div class="card-body">
+          <div class="mb-3">
+            <label for="exampleInputUsername1" class="form-label">Maximum Date</label>
+            <input class="form-control" type="text" placeholder="Maximum date: 2024-12-12" ngModel name="maxDate" #maxDate="ngModel" maxDate="2024-12-12"/>
+            <p class="text-danger mt-1" *ngIf="maxDate?.errors?.maxDate">maxDate error</p>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputUsername1" class="form-label">Minimum Date</label>
+            <input class="form-control" type="text" placeholder="minimum date: 2022-12-12" ngModel name="minDate" #minDate="ngModel" minDate="2022-12-12"/>
+            <p class="text-danger mt-1" *ngIf="minDate?.errors?.minDate">minDate error</p>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputUsername1" class="form-label">Greater Than</label>
+            <input class="form-control" type="text" placeholder="greater than: 10" ngModel name="gt" #gt="ngModel" [gt]="10"/>
+            <p class="text-danger mt-1" *ngIf="gt?.errors?.gt">greater than error</p>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputUsername1" class="form-label">Greater Than Equal</label>
+            <input class="form-control" type="text" placeholder="greater than equal: 10" ngModel name="gte" #gte="ngModel" [gte]="10"/>
+            <p class="text-danger mt-1" *ngIf="gte?.errors?.gte">greater than equal error</p>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputUsername1" class="form-label">Less Than</label>
+            <input class="form-control" type="text" placeholder="less than: 5" ngModel name="lt" #lt="ngModel" [lt]="5"/>
+            <p class="text-danger mt-1" *ngIf="lt?.errors?.lt">less than error</p>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputUsername1" class="form-label">Less Than Equal</label>
+            <input class="form-control" type="text" placeholder="less than equal: 5" ngModel name="lte" #lte="ngModel" [lte]="5"/>
+            <p class="text-danger mt-1" *ngIf="lte?.errors?.lte">less than equal error</p>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputUsername1" class="form-label">Json</label>
+            <input class="form-control" type="text" placeholder="json" ngModel name="json" #json="ngModel" json/>
+            <p class="text-danger mt-1" *ngIf="json?.errors?.json">json error</p>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputUsername1" class="form-label">Maximum</label>
+            <input class="form-control" type="text" placeholder="maximum: 5" ngModel name="max" #max="ngModel" [max]="5"/>
+            <p class="text-danger mt-1" *ngIf="max?.errors?.max">max error</p>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputUsername1" class="form-label">Minimum</label>
+            <input class="form-control" type="text" placeholder="minimum: 5" ngModel name="min" #min="ngModel" [min]="5"/>
+            <p class="text-danger mt-1" *ngIf="min?.errors?.min">min error</p>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputUsername1" class="form-label">Number</label>
+            <input class="form-control" type="text" placeholder="number" ngModel name="number" #number="ngModel" number/>
+            <p class="text-danger mt-1" *ngIf="number?.errors?.number">number error</p>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputUsername1" class="form-label">URL</label>
+            <input class="form-control" type="text" placeholder="url" ngModel name="url" #url="ngModel" url/>
+            <p class="text-danger mt-1" *ngIf="url?.errors?.url">url error</p>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputUsername1" class="form-label">UUID</label>
+            <input class="form-control" type="text" placeholder="uuid: 3" ngModel name="uuid" #uuid="ngModel" uuid="3"/>
+            <p class="text-danger mt-1" *ngIf="uuid?.errors?.uuid">uuid error</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

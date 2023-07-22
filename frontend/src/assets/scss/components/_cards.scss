@@ -1,0 +1,34 @@
+// Cards 
+
+.card {
+  box-shadow: $card-box-shadow;
+  -webkit-box-shadow: $card-box-shadow;
+  -moz-box-shadow: $card-box-shadow;
+  -ms-box-shadow: $card-box-shadow;
+  .card-body {
+    + .card-body {
+      padding-top: 1rem;
+    }
+  }
+  .card-title {
+    text-transform: uppercase;
+    font-size: .875rem;
+    font-weight: 500;
+  }
+}
+
+.card-group {
+  box-shadow: $card-box-shadow;
+  .card {
+    box-shadow: none;
+  }
+}
+
+.card-link {
+  + .card-link {
+    /*rtl:raw:
+    margin-left: 1.5rem;
+    margin-right: 0;
+    */
+  }
+}

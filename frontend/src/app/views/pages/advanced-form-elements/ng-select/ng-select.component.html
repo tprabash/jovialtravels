@@ -1,0 +1,156 @@
+<nav class="page-breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a routerLink=".">Forms</a></li>
+    <li class="breadcrumb-item"><a routerLink=".">Advanced Elements</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Ng-select</li>
+  </ol>
+</nav>
+
+<div class="row">
+  <div class="col-md-12 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Ng-select</h4>
+        <p class=“text-muted”>Read the <a href="https://github.com/ng-select/ng-select#readme" target="_blank"> Official Ng-select Documentation </a>for a full list of instructions and other options.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h6 class="card-title">Simple array</h6>
+
+        <ng-select [items]="simpleItems"
+          [searchable]="false"
+          [(ngModel)]="selectedSimpleItem">
+        </ng-select>
+        <p class="mt-2 text-muted">Selected item: <span class="fw-bolder">{{selectedSimpleItem}}</span></p>
+
+      </div>
+    </div>
+  </div> <!-- col -->
+  <div class="col-md-6 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h6 class="card-title">Array of objects</h6>
+
+        <ng-select [items]="people"
+          bindLabel="name"
+          bindValue="id"
+          [searchable]="false"
+          [(ngModel)]="selectedPersonId">
+        </ng-select>
+        <p class="mt-2 text-muted">Selected item: <span class="fw-bolder">{{selectedPersonId}}</span></p>
+        
+      </div>
+    </div>
+  </div> <!-- col -->
+  <div class="col-md-6 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h6 class="card-title">Search and autocomplete</h6>
+
+        <ng-select [items]="people"
+          bindLabel="name"
+          bindValue="id"
+          placeholder="type to search"
+          [(ngModel)]="selectedSearchPersonId">
+        </ng-select>
+        <p class="mt-2 text-muted">Selected item: <span class="fw-bolder">{{selectedSearchPersonId}}</span></p>
+        
+      </div>
+    </div>
+  </div> <!-- col -->
+  <div class="col-md-6 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h6 class="card-title">Multi select</h6>
+
+        <ng-select
+          [items]="people"
+          [multiple]=true
+          [closeOnSelect]="false"
+          [searchable]="false"
+          bindLabel="name"
+          placeholder="Select people"
+          [(ngModel)]="selectedPeople">
+        </ng-select>
+        <div class="mt-2">
+          <p class="text-muted">Selected items:</p>
+          <ul>
+            <li *ngFor="let item of selectedPeople">{{item.name}}</li>
+          </ul>
+        </div>
+        
+      </div>
+    </div>
+  </div> <!-- col -->
+  <div class="col-md-6 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h6 class="card-title">Grouped multi select with checkboxes</h6>
+
+        <ng-select
+          [items]="people"
+          [multiple]=true
+          bindLabel="name"
+          groupBy="gender"
+          [selectableGroup]="true"
+          [selectableGroupAsModel]="false"
+          [closeOnSelect]="false"
+          bindValue="id"
+          [(ngModel)]="groupedMultiSelectedPeople">
+          <ng-template ng-optgroup-tmp let-item="item" let-item$="item$" let-index="index">
+            <input id="item-{{index}}" type="checkbox" [ngModel]="item$.selected"/> {{item.gender | uppercase}}
+          </ng-template>
+          <ng-template ng-option-tmp let-item="item" let-item$="item$" let-index="index">
+            <input id="item-{{index}}" type="checkbox" [ngModel]="item$.selected"/> {{item.name}}
+          </ng-template>
+        </ng-select>
+        <div class="mt-2">
+          <p class="text-muted">Selected items:</p>
+          <ul>
+            <li *ngFor="let item of groupedMultiSelectedPeople">{{item}}</li>
+          </ul>
+        </div>
+        
+      </div>
+    </div>
+  </div> <!-- col -->
+  <div class="col-md-6 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h6 class="card-title">Custom selected item template</h6>
+
+        <ng-select 
+          [items]="people" 
+          [multiple]=true
+          bindLabel="name"
+          bindValue="id"
+          [hideSelected]="true"
+          [(ngModel)]="customTemplateSelectedPeople">
+          
+          <ng-template ng-label-tmp let-item="item" let-clear="clear">
+            <span class="ng-value-label"><img [src]="item.picture" width="20px" height="20px"> {{item.name}}</span>
+            <span class="ng-value-icon right" (click)="clear(item)" aria-hidden="true">×</span>
+          </ng-template>
+      
+          <ng-template ng-option-tmp let-item="item">
+            <img [src]="item.picture" width="20px" height="20px"> {{item.name}}
+          </ng-template>
+
+        </ng-select>
+        <div class="mt-2">
+          <p class="text-muted">Selected items:</p>
+          <ul>
+            <li *ngFor="let item of customTemplateSelectedPeople">{{item}}</li>
+          </ul>
+        </div>
+        
+      </div>
+    </div>
+  </div> <!-- col -->
+</div> <!-- row -->

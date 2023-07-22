@@ -1,0 +1,94 @@
+<div class="row">
+  <div class="col-xl-10 main-content ps-xl-4 pe-xl-5">
+    <h1 class="page-title">Progress</h1>
+    <p class="lead">Documentation and examples for using Bootstrap custom progress bars featuring support for stacked bars, animated backgrounds, and text labels. Read the <a href="https://ng-bootstrap.github.io/#/components/progressbar/examples" target="_blank">Official Ng-Bootstrap Documentation</a> for a full list of instructions and other options.</p>
+    
+    <hr>
+    
+    <h4 #default>Basic example</h4>
+    <div class="example">
+      <ngb-progressbar type="primary" [value]="25"></ngb-progressbar>
+    </div>
+    <app-code-preview [codeContent]="defaultProgressCode"></app-code-preview>
+    
+    <hr>
+    
+    <h4 #labels>Labels</h4>
+    <div class="example">
+      <p class="mb-3"><ngb-progressbar type="primary" [value]="25" [showValue]="true"></ngb-progressbar></p>
+      <p><ngb-progressbar type="success" [value]="100">Completed</ngb-progressbar></p>
+    </div>
+    <app-code-preview [codeContent]="progressLabelCode"></app-code-preview>
+    
+    <hr>
+    
+    <h4 #height>Height</h4>
+    <div class="example">
+      <p class="mb-3"><ngb-progressbar type="primary" [value]="25" height="5px"></ngb-progressbar></p>
+      <p class="mb-3"><ngb-progressbar type="primary" [value]="25" height="10px"></ngb-progressbar></p>
+      <p><ngb-progressbar type="primary" [value]="25" height="15px"></ngb-progressbar></p>
+    </div>
+    <app-code-preview [codeContent]="progressHeightCode"></app-code-preview>
+    
+    <hr>
+    
+    <h4 #backgrounds>Backgrounds</h4>
+    <p class="mb-3">Use background utility classes to change the appearance of individual progress bars.</p>
+    <div class="example">
+      <p class="mb-3"><ngb-progressbar type="primary" [value]="25" [showValue]="true"></ngb-progressbar></p>
+      <p class="mb-3"><ngb-progressbar type="success" [value]="40" [showValue]="true"></ngb-progressbar></p>
+      <p class="mb-3"><ngb-progressbar type="info" [value]="55" [showValue]="true"></ngb-progressbar></p>
+      <p class="mb-3"><ngb-progressbar type="warning" [value]="75" [showValue]="true"></ngb-progressbar></p>
+      <p><ngb-progressbar type="danger" [value]="95" [showValue]="true"></ngb-progressbar></p>
+    </div>
+    <app-code-preview [codeContent]="progressBackgroundCode"></app-code-preview>
+    
+    <hr>
+    
+    <h4 #striped>Striped</h4>
+    <div class="example">
+      <p class="mb-3"><ngb-progressbar type="primary" [value]="25" [striped]="true"></ngb-progressbar></p>
+      <p class="mb-3"><ngb-progressbar type="success" [value]="40" [striped]="true"></ngb-progressbar></p>
+      <p class="mb-3"><ngb-progressbar type="info" [value]="55" [striped]="true"></ngb-progressbar></p>
+      <p class="mb-3"><ngb-progressbar type="warning" [value]="75" [striped]="true"></ngb-progressbar></p>
+      <p><ngb-progressbar type="danger" [value]="95" [striped]="true"></ngb-progressbar></p>
+    </div>
+    <app-code-preview [codeContent]="progressStripedCode"></app-code-preview>
+    
+    <hr>
+    
+    <h4 #animated>Animated stripes</h4>
+    <div class="example">
+      <p class="mb-3"><ngb-progressbar type="primary" [value]="25" [striped]="true" [animated]="true"></ngb-progressbar></p>
+      <p class="mb-3"><ngb-progressbar type="success" [value]="40" [striped]="true" [animated]="true"></ngb-progressbar></p>
+      <p class="mb-3"><ngb-progressbar type="info" [value]="55" [striped]="true" [animated]="true"></ngb-progressbar></p>
+      <p class="mb-3"><ngb-progressbar type="warning" [value]="75" [striped]="true" [animated]="true"></ngb-progressbar></p>
+      <p><ngb-progressbar type="danger" [value]="95" [striped]="true" [animated]="true"></ngb-progressbar></p>
+    </div>
+    <app-code-preview [codeContent]="progressStripedAnimatedCode"></app-code-preview>
+    
+  </div>
+  <div class="col-xl-2 content-nav-wrapper">
+    <ul class="nav content-nav d-flex flex-column">
+      <li class="nav-item">
+        <a (click)="scrollTo(default)" class="nav-link">Basic example</a>
+      </li>
+      <li class="nav-item">
+        <a (click)="scrollTo(labels)" class="nav-link">Labels</a>
+      </li>
+      <li class="nav-item">
+        <a (click)="scrollTo(height)" class="nav-link">Height</a>
+      </li>
+      <li class="nav-item">
+        <a (click)="scrollTo(backgrounds)" class="nav-link">Backgrounds</a>
+      </li>
+      <li class="nav-item">
+        <a (click)="scrollTo(striped)" class="nav-link">Striped</a>
+      </li>
+      <li class="nav-item">
+        <a (click)="scrollTo(animated)" class="nav-link">Animated stripes</a>
+      </li>
+      
+    </ul>
+  </div>
+</div>

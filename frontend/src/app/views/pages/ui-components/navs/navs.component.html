@@ -1,0 +1,294 @@
+<div class="row">
+  <div class="col-xl-10 main-content ps-xl-4 pe-xl-5">
+    <h1 class="page-title">Navs</h1>
+    <p class="lead">Documentation and examples for how to use Bootstrap’s included navigation components. Read the <a href="https://ng-bootstrap.github.io/#/components/nav/examples" target="_blank">Official Ng-Bootstrap Documentation</a> for a full list of instructions and other options.</p>
+    
+    <hr>
+    
+    <h4 #default>Basic example</h4>
+    <div class="example">
+      <ul ngbNav #defaultNav="ngbNav" [(activeId)]="defaultNavActiveId" class="nav-tabs">
+        <li [ngbNavItem]="1">
+          <a ngbNavLink>One</a>
+          <ng-template ngbNavContent>
+            <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth
+              master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro
+              keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat
+              salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+          </ng-template>
+        </li>
+        <li [ngbNavItem]="2">
+          <a ngbNavLink>Two</a>
+          <ng-template ngbNavContent>
+            <p>Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko
+              farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts
+              ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar
+              helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson
+              8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester
+              stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.</p>
+          </ng-template>
+        </li>
+        <li [ngbNavItem]="3">
+          <a ngbNavLink>Three</a>
+          <ng-template ngbNavContent>
+            <p>Sed commodo, leo at suscipit dictum, quam est porttitor sapien, eget sodales nibh elit id diam. Nulla facilisi.
+              Donec egestas ligula vitae odio interdum aliquet. Duis lectus turpis, luctus eget tincidunt eu, congue et odio.
+              Duis pharetra et nisl at faucibus. Quisque luctus pulvinar arcu, et molestie lectus ultrices et. Sed diam urna,
+              egestas ut ipsum vel, volutpat volutpat neque. Praesent fringilla tortor arcu. Vivamus faucibus nisl enim, nec
+              tristique ipsum euismod facilisis. Morbi ut bibendum est, eu tincidunt odio. Orci varius natoque penatibus et
+              magnis dis parturient montes, nascetur ridiculus mus. Mauris aliquet odio ac lorem aliquet ultricies in eget
+              neque. Phasellus nec tortor vel tellus pulvinar feugiat.</p>
+          </ng-template>
+        </li>
+      </ul>
+      
+      <div [ngbNavOutlet]="defaultNav" class="border border-top-0 p-3"></div>
+      <p class="mt-2">Active: {{ defaultNavActiveId }}</p>
+    </div>
+    <app-code-preview [codeContent]="defaultNavCode"></app-code-preview>
+    
+    <hr>
+    
+    <h4 #HAlignment>Horizontal alignment</h4>
+    <p class="mb-3">Change the horizontal alignment of your nav with flexbox utilities. By default, navs are left-aligned, but you can easily change them to center or right aligned.</p>
+    <div class="example">
+      <ul ngbNav #horizontalCenterNav="ngbNav" class="nav-tabs justify-content-center">
+        <li [ngbNavItem]="1">
+          <a ngbNavLink>Home</a>
+          <ng-template ngbNavContent>
+            <h6 class="mb-2">Home</h6>
+            <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth
+              master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica.</p>
+          </ng-template>
+        </li>
+        <li [ngbNavItem]="2">
+          <a ngbNavLink>Profile</a>
+          <ng-template ngbNavContent>
+            <h6 class="mb-2">Profile</h6>
+            <p>Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko
+              farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts
+              ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit.</p>
+          </ng-template>
+        </li>
+        <li [ngbNavItem]="3">
+          <a ngbNavLink>Contact</a>
+          <ng-template ngbNavContent>
+            <h6 class="mb-2">Contact</h6>
+            <p>Sed commodo, leo at suscipit dictum, quam est porttitor sapien, eget sodales nibh elit id diam. Nulla facilisi.
+              Donec egestas ligula vitae odio interdum aliquet. Duis lectus turpis, luctus eget tincidunt eu, congue et odio.
+              Duis pharetra et nisl at faucibus.</p>
+          </ng-template>
+        </li>
+        <li [ngbNavItem]="4">
+          <a ngbNavLink class="disabled">Disabled</a>
+          <ng-template ngbNavContent>
+            <h6 class="mb-2">Disabled content</h6>
+            <p>Sed commodo, leo at suscipit dictum, quam est porttitor sapien, eget sodales nibh elit id diam.</p>
+          </ng-template>
+        </li>
+      </ul>
+      
+      <div [ngbNavOutlet]="horizontalCenterNav" class="border border-top-0 p-3"></div>
+    </div>
+    <app-code-preview [codeContent]="horizontalCenterCode"></app-code-preview>
+
+    <div class="example">
+      <ul ngbNav #horizontalEndNav="ngbNav" class="nav-tabs justify-content-end">
+        <li [ngbNavItem]="1">
+          <a ngbNavLink>Home</a>
+          <ng-template ngbNavContent>
+            <h6 class="mb-2">Home</h6>
+            <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth
+              master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica.</p>
+          </ng-template>
+        </li>
+        <li [ngbNavItem]="2">
+          <a ngbNavLink>Profile</a>
+          <ng-template ngbNavContent>
+            <h6 class="mb-2">Profile</h6>
+            <p>Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko
+              farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts
+              ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit.</p>
+          </ng-template>
+        </li>
+        <li [ngbNavItem]="3">
+          <a ngbNavLink>Contact</a>
+          <ng-template ngbNavContent>
+            <h6 class="mb-2">Contact</h6>
+            <p>Sed commodo, leo at suscipit dictum, quam est porttitor sapien, eget sodales nibh elit id diam. Nulla facilisi.
+              Donec egestas ligula vitae odio interdum aliquet. Duis lectus turpis, luctus eget tincidunt eu, congue et odio.
+              Duis pharetra et nisl at faucibus.</p>
+          </ng-template>
+        </li>
+        <li [ngbNavItem]="4">
+          <a ngbNavLink class="disabled">Disabled</a>
+          <ng-template ngbNavContent>
+            <h6 class="mb-2">Disabled content</h6>
+            <p>Sed commodo, leo at suscipit dictum, quam est porttitor sapien, eget sodales nibh elit id diam.</p>
+          </ng-template>
+        </li>
+      </ul>
+      
+      <div [ngbNavOutlet]="horizontalEndNav" class="border border-top-0 p-3"></div>
+    </div>
+    <app-code-preview [codeContent]="horizontalEndCode"></app-code-preview>
+
+    <hr>
+    
+    <h4 #VAlignment>Vertical alignment</h4>
+    <div class="example">
+      <div class="row">
+        <div class="col-5 col-md-3 pe-0">
+          <ul ngbNav #verticalNav="ngbNav" class="nav-tabs nav-tabs-vertical" orientation="vertical">
+            <li [ngbNavItem]="1">
+              <a ngbNavLink>Home</a>
+              <ng-template ngbNavContent>
+                <h6 class="mb-2">Home</h6>
+                <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth
+                  master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica.</p>
+              </ng-template>
+            </li>
+            <li [ngbNavItem]="2">
+              <a ngbNavLink>Profile</a>
+              <ng-template ngbNavContent>
+                <h6 class="mb-2">Profile</h6>
+                <p>Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko
+                  farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts
+                  ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit.</p>
+              </ng-template>
+            </li>
+            <li [ngbNavItem]="3">
+              <a ngbNavLink>Contact</a>
+              <ng-template ngbNavContent>
+                <h6 class="mb-2">Contact</h6>
+                <p>Sed commodo, leo at suscipit dictum, quam est porttitor sapien, eget sodales nibh elit id diam. Nulla facilisi.
+                  Donec egestas ligula vitae odio interdum aliquet. Duis lectus turpis, luctus eget tincidunt eu, congue et odio.
+                  Duis pharetra et nisl at faucibus.</p>
+              </ng-template>
+            </li>
+            <li [ngbNavItem]="4">
+              <a ngbNavLink class="disabled">Disabled</a>
+              <ng-template ngbNavContent>
+                <h6 class="mb-2">Disabled content</h6>
+                <p>Sed commodo, leo at suscipit dictum, quam est porttitor sapien, eget sodales nibh elit id diam.</p>
+              </ng-template>
+            </li>
+          </ul>
+        </div>
+        <div class="col-7 col-md-9 ps-0">
+          <div [ngbNavOutlet]="verticalNav" class="tab-content-vertical border p-3"></div>
+        </div>
+      </div>
+    </div>
+    <app-code-preview [codeContent]="verticalNavCode"></app-code-preview>
+
+    <hr>
+
+    <h4 #fillJustify>Fill and justify</h4>
+    <div class="example">
+      <ul ngbNav #fillJustifyNav="ngbNav" class="nav-tabs nav-fill">
+        <li [ngbNavItem]="1">
+          <a ngbNavLink>Home</a>
+          <ng-template ngbNavContent>
+            <h6 class="mb-2">Home</h6>
+            <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth
+              master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica.</p>
+          </ng-template>
+        </li>
+        <li [ngbNavItem]="2">
+          <a ngbNavLink>Profile</a>
+          <ng-template ngbNavContent>
+            <h6 class="mb-2">Profile</h6>
+            <p>Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko
+              farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts
+              ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit.</p>
+          </ng-template>
+        </li>
+        <li [ngbNavItem]="3">
+          <a ngbNavLink>Contact</a>
+          <ng-template ngbNavContent>
+            <h6 class="mb-2">Contact</h6>
+            <p>Sed commodo, leo at suscipit dictum, quam est porttitor sapien, eget sodales nibh elit id diam. Nulla facilisi.
+              Donec egestas ligula vitae odio interdum aliquet. Duis lectus turpis, luctus eget tincidunt eu, congue et odio.
+              Duis pharetra et nisl at faucibus.</p>
+          </ng-template>
+        </li>
+        <li [ngbNavItem]="4">
+          <a ngbNavLink class="disabled">Disabled</a>
+          <ng-template ngbNavContent>
+            <h6 class="mb-2">Disabled content</h6>
+            <p>Sed commodo, leo at suscipit dictum, quam est porttitor sapien, eget sodales nibh elit id diam.</p>
+          </ng-template>
+        </li>
+      </ul>
+      
+      <div [ngbNavOutlet]="fillJustifyNav" class="border border-top-0 p-3"></div>
+    </div>
+    <app-code-preview [codeContent]="fillJustifyNavCode"></app-code-preview>
+
+    <hr>
+
+    <h4 #tabsDropdown>Tabs with dropdowns</h4>
+    <div class="example">
+      <ul ngbNav #navWidthDropdown="ngbNav" class="nav-tabs">
+        <li [ngbNavItem]="1">
+          <a ngbNavLink>Home</a>
+          <ng-template ngbNavContent>
+            <h6 class="mb-2">Home</h6>
+            <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth
+              master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica.</p>
+          </ng-template>
+        </li>
+        <li [ngbNavItem]="2">
+          <a ngbNavLink>Profile</a>
+          <ng-template ngbNavContent>
+            <h6 class="mb-2">Profile</h6>
+            <p>Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko
+              farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts
+              ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit.</p>
+          </ng-template>
+        </li>
+        <li ngbDropdown ngbNavItem>
+          <a href (click)="false" class="nav-link" ngbDropdownToggle>Dropdown</a>
+          <div ngbDropdownMenu>
+            <button ngbDropdownItem>Action</button>
+            <button ngbDropdownItem>Another action</button>
+            <button ngbDropdownItem>Something else here</button>
+            <div class="dropdown-divider"></div>
+            <button ngbDropdownItem>Separated link</button>
+          </div>
+        </li>
+        <li [ngbNavItem]="4">
+          <a ngbNavLink class="disabled">Disabled</a>
+          <ng-template ngbNavContent>
+            <h6 class="mb-2">Disabled content</h6>
+            <p>Sed commodo, leo at suscipit dictum, quam est porttitor sapien, eget sodales nibh elit id diam.</p>
+          </ng-template>
+        </li>
+      </ul>
+      
+      <div [ngbNavOutlet]="navWidthDropdown" class="border border-top-0 p-3"></div>
+    </div>
+    <app-code-preview [codeContent]="navWidthDropdownCode"></app-code-preview>
+
+  </div>
+  <div class="col-xl-2 content-nav-wrapper">
+    <ul class="nav content-nav d-flex flex-column">
+      <li class="nav-item">
+        <a (click)="scrollTo(default)" class="nav-link">Basic example</a>
+      </li>
+      <li class="nav-item">
+        <a (click)="scrollTo(HAlignment)" class="nav-link">Horizontal alignment</a>
+      </li>
+      <li class="nav-item">
+        <a (click)="scrollTo(VAlignment)" class="nav-link">Vertical alignment</a>
+      </li>
+      <li class="nav-item">
+        <a (click)="scrollTo(fillJustify)" class="nav-link">Fill and justify</a>
+      </li>
+      <li class="nav-item">
+        <a (click)="scrollTo(tabsDropdown)" class="nav-link">Tabs with dropdowns</a>
+      </li>
+    </ul>
+  </div>
+</div>

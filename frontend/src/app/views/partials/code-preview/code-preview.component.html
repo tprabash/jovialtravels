@@ -1,0 +1,33 @@
+<section class="highlight">
+  <ul ngbNav #nav="ngbNav" [(activeId)]="defaultNavActiveId" class="nav-tabs">
+    <li [ngbNavItem]="1" *ngIf="codeContent.htmlCode">
+      <a ngbNavLink>HTML</a>
+      <ng-template ngbNavContent>
+        <pre><code [highlight]="codeContent.htmlCode"></code></pre>
+        <button class="btn btn-clipboard" ngxClipboard title="Copy example code" [cbContent]="codeContent.htmlCode" (cbOnSuccess)="copied($event)">{{copy}}</button>
+      </ng-template>
+    </li>
+    <li [ngbNavItem]="2" *ngIf="codeContent.tsCode">
+      <a ngbNavLink>TS</a>
+      <ng-template ngbNavContent>
+        <pre><code [highlight]="codeContent.tsCode"></code></pre>
+        <button class="btn btn-clipboard" ngxClipboard title="Copy example code" [cbContent]="codeContent.tsCode" (cbOnSuccess)="copied($event)">{{copy}}</button>
+      </ng-template>
+    </li>
+    <li [ngbNavItem]="3" *ngIf="codeContent.scssCode">
+      <a ngbNavLink>SCSS</a>
+      <ng-template ngbNavContent>
+        <pre><code [highlight]="codeContent.scssCode"></code></pre>
+        <button class="btn btn-clipboard" ngxClipboard title="Copy example code" [cbContent]="codeContent.scssCode" (cbOnSuccess)="copied($event)">{{copy}}</button>
+      </ng-template>
+    </li>
+    <li [ngbNavItem]="4" *ngIf="codeContent.moduleCode">
+      <a ngbNavLink>MODULE</a>
+      <ng-template ngbNavContent>
+        <pre><code [highlight]="codeContent.moduleCode"></code></pre>
+        <button class="btn btn-clipboard" ngxClipboard title="Copy example code" [cbContent]="codeContent.moduleCode" (cbOnSuccess)="copied($event)">{{copy}}</button>
+      </ng-template>
+    </li>
+  </ul>
+  <div [ngbNavOutlet]="nav"></div>
+</section>

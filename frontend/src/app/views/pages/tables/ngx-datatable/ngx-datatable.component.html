@@ -1,0 +1,45 @@
+<nav class="page-breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a routerLink=".">Tables</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Ngx-Datatable</li>
+  </ol>
+</nav>
+
+<div class="row">
+  <div class="col-md-12 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Ngx-datatable</h4>
+        <p class=“text-muted”>Read the <a href="https://github.com/swimlane/ngx-datatable" target="_blank"> Official Ngx-datatable Documentation </a>for a full list of instructions and other options.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12 stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h6 class="card-title">Ngx-Datatable</h6>
+        <div class="table-responsive">
+          <ngx-datatable
+            class="bootstrap"
+            [rows]="rows"
+            [loadingIndicator]="loadingIndicator"
+            [columnMode]="ColumnMode.force"
+            [footerHeight]="50"
+            [limit]="10"
+            rowHeight="auto"
+          >
+            <ngx-datatable-column name="Id"></ngx-datatable-column>
+            <ngx-datatable-column name="Name"></ngx-datatable-column>
+            <ngx-datatable-column name="Gender"></ngx-datatable-column>
+            <ngx-datatable-column name="Age"></ngx-datatable-column>
+            <ngx-datatable-column name="City" prop="address.city"></ngx-datatable-column>
+            <ngx-datatable-column name="State" prop="address.state"></ngx-datatable-column>
+          </ngx-datatable>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

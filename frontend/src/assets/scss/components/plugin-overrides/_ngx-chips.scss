@@ -1,0 +1,81 @@
+// Plugin: Ngx-chips
+// github: https://github.com/Gbuomprisco/ngx-chips
+
+tag-input {
+  .ng2-tag-input {
+    @extend .border;
+    padding: 5px 6px 0 !important;
+    border-radius: $input-border-radius;
+    min-height: 38px;
+    tag {
+      height: 28px;
+      line-height: 28px;
+      border-radius: 2px;
+      margin: 0 .3rem .3131rem 0;
+      background: $light;
+      color: $body-color;
+      font-size: .78rem;
+      &:not(.readonly):not(.tag--editing):active,
+      &:not(.readonly):not(.tag--editing):focus,
+      &:not(.readonly):not(:focus):not(.tag--editing):not(:active):hover {
+        background: $primary;
+        color: $white;
+      }
+      .tag-wrapper {
+        delete-icon {
+          svg {
+            height: 14px;
+            vertical-align: text-bottom;
+          }
+          &:hover {
+            transform: scale(1.3) translateY(-1px);
+          }
+        }
+      }
+    }
+    tag-input-form {
+      form {
+        .ng2-tag-input__text-input {
+          height: 28px;
+          background: transparent;
+          color: $body-color;
+          &::placeholder {
+            color: $input-placeholder-color;
+          }
+        }
+      }
+    }
+    &.bootstrap {
+      .ng2-tags-container {
+        tag {
+          background: $primary;
+          height: 26px;
+          line-height: 25px;
+          border-radius: 2px;
+          &:hover {
+          }
+          &.tag--editing {
+            background: $white;
+            color: $body-color;
+            border: 1px solid $border-color;
+            padding-right: 18px;
+          }
+          &:not(.readonly):not(.tag--editing):active,
+          &:not(.readonly):not(.tag--editing):focus,
+          &:not(.readonly):not(:focus):not(.tag--editing):not(:active):hover {
+            background: darken($primary, 6%);
+            box-shadow: $card-box-shadow;
+          }
+          .tag-wrapper {
+            delete-icon {
+              svg {
+                height: 14px;
+                vertical-align: text-bottom;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

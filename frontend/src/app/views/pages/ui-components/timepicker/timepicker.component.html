@@ -1,0 +1,50 @@
+<div class="row">
+  <div class="col-xl-10 main-content ps-xl-4 pe-xl-5">
+    <h1 class="page-title">Timepicker</h1>
+    <p class="lead">A directive that helps with wth picking hours, minutes and seconds.. Read the <a href="https://ng-bootstrap.github.io/#/components/timepicker/examples" target="_blank">Official Ng-Bootstrap Documentation</a> for a full list of instructions and other options.</p>
+    
+    <hr>
+    
+    <h4 #default>Basic Example</h4>
+    <div class="example">
+      <ngb-timepicker [(ngModel)]="time"></ngb-timepicker>
+
+      <p class="text-muted mt-2">Selected time: {{time | json}}</p>
+    </div>
+    <app-code-preview [codeContent]="defaultTimepickerCode"></app-code-preview>
+
+    <hr>
+    
+    <h4 #meridian>Meridian</h4>
+    <div class="example">
+      <ngb-timepicker [(ngModel)]="time" [meridian]="true"></ngb-timepicker>
+      
+      <p class="text-muted mt-2">Selected time: {{time | json}}</p>
+    </div>
+    <app-code-preview [codeContent]="meridianCode"></app-code-preview>
+
+    <hr>
+    
+    <h4 #seconds>Seconds</h4>
+    <div class="example">
+      <ngb-timepicker [(ngModel)]="timeWithSeconds" [seconds]="true" [meridian]="true"></ngb-timepicker>
+      
+      <p class="text-muted mt-2">Selected time: {{timeWithSeconds | json}}</p>
+    </div>
+    <app-code-preview [codeContent]="secondsCode"></app-code-preview>
+    
+  </div>
+  <div class="col-xl-2 content-nav-wrapper">
+    <ul class="nav content-nav d-flex flex-column">
+      <li class="nav-item">
+        <a (click)="scrollTo(default)" class="nav-link">Basic example</a>
+      </li>
+      <li class="nav-item">
+        <a (click)="scrollTo(meridian)" class="nav-link">Meridian</a>
+      </li>
+      <li class="nav-item">
+        <a (click)="scrollTo(seconds)" class="nav-link">Seconds</a>
+      </li>
+    </ul>
+  </div>
+</div>

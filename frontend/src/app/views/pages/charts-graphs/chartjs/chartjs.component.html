@@ -1,0 +1,177 @@
+<nav class="page-breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a routerLink=".">Charts & graphs</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Ng2-charts</li>
+  </ol>
+</nav>
+
+<div class="row">
+  <div class="col-md-12 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Ng2-charts</h4>
+        <p class=“text-muted”>Read the <a href="https://github.com/valor-software/ng2-charts" target="_blank"> Official Ng2-charts Documentation </a>for a full list of instructions and other options.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xl-6 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h6 class="card-title">Bar chart</h6>
+
+        <canvas baseChart 
+          [data]="barChartData"
+          [options]="barChartOptions"
+          [plugins]="barChartPlugins"
+          [type]="barChartType">
+        </canvas>
+        
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-6 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h6 class="card-title">Line chart</h6>
+
+        <canvas baseChart
+          [data]="lineChartData"
+          [options]="lineChartOptions"
+          [type]="lineChartType"
+          [plugins]="lineChartPlugins">
+        </canvas>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xl-6 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h6 class="card-title">Doughnut chart</h6>
+
+        <canvas baseChart
+          [data]="doughnutChartData"
+          [options]="doughnutChartOptions"
+          [type]="doughnutChartType">
+        </canvas>
+
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-6 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h6 class="card-title">Area chart</h6>
+
+        <canvas baseChart
+          [data]="areaChartData"
+          [options]="areaChartOptions"
+          [type]="areaChartType"
+          [plugins]="areaChartPlugins">
+        </canvas>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xl-6 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h6 class="card-title">Pie chart</h6>
+
+        <canvas baseChart 
+          [data]="pieChartData"
+          [options]="pieChartOptions"
+          [type]="pieChartType">
+        </canvas>
+
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-6 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h6 class="card-title">Bubble chart</h6>
+
+        <canvas baseChart
+          [data]="bubbleChartData"
+          [options]="bubbleChartOptions"
+          [legend]="bubbleChartLegend"
+          [type]="bubbleChartType">
+        </canvas>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xl-6 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h6 class="card-title">Radar chart</h6>
+
+        <canvas baseChart
+          [data]="radarChartData"
+          [options]="radarChartOptions"
+          [type]="radarChartType">
+        </canvas>
+
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-6 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h6 class="card-title">Polar area chart</h6>
+
+        <canvas baseChart
+          [data]="polarAreaChartData"
+          [options]="polarChartOptions"
+          [legend]="polarAreaLegend"
+          [type]="polarAreaChartType">
+        </canvas>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xl-6 grid-margin grid-margin-xl-0 stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h6 class="card-title">Grouped bar chart</h6>
+        
+        <canvas baseChart 
+          [data]="groupedBarChartData"
+          [options]="groupedBarChartOptions"
+          [type]="groupedBarChartType">
+        </canvas>
+
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-6 stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h6 class="card-title">Mixed bar chart</h6>
+
+        <canvas baseChart 
+          [data]="mixedChartData"
+          [options]="mixedChartOptions">
+          [type]="mixedChartType">
+        </canvas>
+
+      </div>
+    </div>
+  </div>
+</div>

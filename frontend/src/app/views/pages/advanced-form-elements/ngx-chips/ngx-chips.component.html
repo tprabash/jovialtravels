@@ -1,0 +1,121 @@
+<nav class="page-breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a routerLink=".">Forms</a></li>
+    <li class="breadcrumb-item"><a routerLink=".">Advanced Elements</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Ngx-chips</li>
+  </ol>
+</nav>
+
+<div class="row">
+  <div class="col-md-12 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Ngx-chips</h4>
+        <p class=“text-muted”>Read the <a href="https://github.com/Gbuomprisco/ngx-chips" target="_blank"> Official Ngx-chips Documentation </a>for a full list of instructions and other options.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h6 class="card-title">Simple input</h6>
+
+        <tag-input [(ngModel)]='items' 
+                    theme="bootstrap"
+                    [modelAsStrings]="true"
+                    (onSelect)="onSelect($event)"
+                    (onTextChange)="onTextChange($event)"
+                    (onAdd)="onAdd($event)">
+        </tag-input>
+
+        <p class="mt-2 text-muted">{{items | json}}</p>
+
+      </div>
+    </div>
+  </div> <!-- col -->
+  <div class="col-md-6 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h6 class="card-title">Partially editable input (Items as objects)</h6>
+
+        <tag-input [(ngModel)]='itemsAsObjects' 
+                    theme="bootstrap"
+                    [identifyBy]="'id'"
+                    [displayBy]="'name'">
+        </tag-input>
+
+        <p class="mt-2 text-muted">{{itemsAsObjects | json}}</p>
+
+      </div>
+    </div>
+  </div> <!-- col -->
+  <div class="col-md-6 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h6 class="card-title">Simple Input with not removable items</h6>
+
+        <tag-input [(ngModel)]='items' 
+                    theme="bootstrap"
+                    [modelAsStrings]="true"
+                    [removable]="false">
+        </tag-input>
+
+      </div>
+    </div>
+  </div> <!-- col -->
+  <div class="col-md-6 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h6 class="card-title">Simple Input with editable items (double click to edit)</h6>
+
+        <tag-input [(ngModel)]='items' 
+                    theme="bootstrap"
+                    [modelAsStrings]="true"
+                    [editable]="true"
+                    (onTagEdited)="onTagEdited($event)">
+        </tag-input>
+
+      </div>
+    </div>
+  </div> <!-- col -->
+  <div class="col-md-6 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h6 class="card-title">Input tag that allows max 4 tags</h6>
+
+        <tag-input [(ngModel)]='itemsWithMaxLimit' 
+                    theme="bootstrap"
+                    [maxItems]="4"
+                    placeholder="Insert a new item">
+        </tag-input>
+
+      </div>
+    </div>
+  </div> <!-- col -->
+  <div class="col-md-6 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h6 class="card-title">Tags custom template</h6>
+
+        <tag-input [(ngModel)]='items' 
+                    theme="bootstrap"
+                    [modelAsStrings]="true"
+                    #input>
+          <ng-template item-template let-item="item" let-index="index">
+            <span>
+                item: {{ item }}
+            </span>
+
+            <span (click)="input.removeItem(item, index)" class="ng2-tag__remove-button">
+                x
+            </span>
+          </ng-template>
+        </tag-input>
+
+      </div>
+    </div>
+  </div> <!-- col -->
+</div> <!-- row -->

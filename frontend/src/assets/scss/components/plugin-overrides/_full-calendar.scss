@@ -1,0 +1,106 @@
+// Plugin: FullCalendar Angular Component
+// github: https://github.com/fullcalendar/fullcalendar-angular
+
+full-calendar.fc {
+  .fc-button-primary {
+    @extend .btn;
+    @extend .btn-outline-primary;
+    @extend .btn-sm;
+  }
+  .fc-button-primary:not(:disabled).fc-button-active, 
+  .fc-button-primary:not(:disabled):active {
+    // @extend .btn-primary;
+    background-color: $component-active-bg;
+    border-color: $component-active-bg;
+  }
+  .fc-button .fc-icon {
+    font-size: 1.2 em;
+  }
+  .fc-button-primary:focus, 
+  .fc-button-primary:not(:disabled).fc-button-active:focus, 
+  .fc-button-primary:not(:disabled):active:focus {
+    box-shadow: none;
+  }
+
+  .fc-button-primary:disabled {
+    border-color: $primary;
+  }
+
+  .fc-daygrid-day-number,
+  .fc-col-header-cell-cushion {
+    color: $body-color;
+  }
+
+  .fc-daygrid-event {
+    padding: 4px;
+    border: 0;
+    border-left: 4px solid transparent;
+    border-radius: 2px;
+  }
+
+  .fc-h-event .fc-event-main,
+  .fc-v-event .fc-event-main {
+    color: $body-color;
+  }
+
+  .fc-h-event,
+  .fc-v-event {
+    background-color: rgba($info, .25);
+    border-color: $info;
+  }
+
+  .fc-daygrid-day.fc-day-today {
+    background-color: rgba($primary, .2);
+  }
+
+  .fc-list-event:hover td {
+    background-color: rgba($primary, .2);
+  }
+
+  .fc-list-day-text,
+  .fc-list-day-side-text {
+    color: $body-color;
+  }
+
+  .fc-timegrid-event-harness-inset .fc-timegrid-event, 
+  .fc-timegrid-event.fc-event-mirror, 
+  .fc-timegrid-more-link {
+    box-shadow: none;
+  }
+}
+
+full-calendar.fc-theme-standard td, 
+full-calendar.fc-theme-standard th,
+full-calendar.fc-theme-standard .fc-scrollgrid {
+  border-color: $border-color;
+}
+
+.fc.fc-theme-standard .fc-popover {
+  background-color: $dropdown-bg;
+  border-color: $dropdown-border-color;
+  box-shadow: $dropdown-box-shadow;
+  .fc-popover-header {
+    background-color: $secondary;
+    color: $light;
+  }
+}
+
+.fc.fc-theme-standard .fc-list-day-cushion {
+  background-color: $light;
+}
+
+.fc.fc-theme-standard .fc-list {
+  border-color: $border-color;
+}
+
+.fc-event {
+  margin-bottom: 10px;
+  padding: 8px;
+  border-radius: 2px;
+  // background: rgba($primary, .2);
+  border: 0;
+  border-left: 3px solid transparent;
+  color: $body-color;
+  font-weight: 500;
+  font-size: .85em;
+}

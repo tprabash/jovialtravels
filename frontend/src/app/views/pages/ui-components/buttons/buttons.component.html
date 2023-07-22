@@ -1,0 +1,229 @@
+<div class="row">
+  <div class="col-xl-10 main-content ps-xl-4 pe-xl-5">
+    <h1 class="page-title">Buttons</h1>
+    <p class="lead">Use Bootstrap’s custom button styles for actions in forms, dialogs, and more with support for multiple sizes, states, and more. Read the <a href="https://getbootstrap.com/docs/5.2/components/buttons/" target="_blank">Official Bootstrap Documentation</a> for a full list of instructions and other options.</p>
+
+    <hr>
+
+    <h4 #default>Basic Example</h4>
+    <p class="mb-3">Bootstrap includes several predefined button styles, each serving its own semantic purpose, with a few extras thrown in for more control.</p>
+    <div class="example">
+      <button type="button" class="btn btn-primary mb-1 mb-md-0">Primary</button>
+      <button type="button" class="btn btn-secondary mb-1 mb-md-0">Secondary</button>
+      <button type="button" class="btn btn-success mb-1 mb-md-0">Success</button>
+      <button type="button" class="btn btn-danger mb-1 mb-md-0">Danger</button>
+      <button type="button" class="btn btn-warning mb-1 mb-md-0">Warning</button>
+      <button type="button" class="btn btn-info mb-1 mb-md-0">Info</button>
+      <button type="button" class="btn btn-light mb-1 mb-md-0">Light</button>
+      <button type="button" class="btn btn-dark mb-1 mb-md-0">Dark</button>
+      <button type="button" class="btn btn-link mb-1 mb-md-0">Link</button>
+    </div>
+    <app-code-preview [codeContent]="defaultButtonsCode"></app-code-preview>
+    
+    <hr>
+
+    <h4 #tags>Button tags</h4>
+    <p class="mb-3">The <code>.btn</code> classes are designed to be used with the <code>&lt;button&gt;</code> element. However, you can also use these classes on <code>&lt;a&gt;</code> or <code>&lt;input&gt;</code> elements (though some browsers may apply a slightly different rendering).</p>
+    <div class="example">
+      <a class="btn btn-primary mb-1 mb-md-0" href="" (click)="false" role="button">Link</a>
+      <button class="btn btn-primary mb-1 mb-md-0" type="submit">Button</button>
+      <input class="btn btn-primary mb-1 mb-md-0" type="button" value="Input">
+      <input class="btn btn-primary mb-1 mb-md-0" type="submit" value="Submit">
+      <input class="btn btn-primary mb-1 mb-md-0" type="reset" value="Reset">
+    </div>
+    <app-code-preview [codeContent]="buttonTagsCode"></app-code-preview>
+    
+    <hr>
+    
+    <h4 #outline>Outline buttons</h4>
+    <p class="mb-3">In need of a button, but not the hefty background colors they bring? Replace the default modifier classes with the <code>.btn-outline-*</code> ones to remove all background images and colors on any button.</p>
+    <div class="example">
+      <button type="button" class="btn btn-outline-primary mb-1 mb-md-0">Primary</button>
+      <button type="button" class="btn btn-outline-secondary mb-1 mb-md-0">Secondary</button>
+      <button type="button" class="btn btn-outline-success mb-1 mb-md-0">Success</button>
+      <button type="button" class="btn btn-outline-danger mb-1 mb-md-0">Danger</button>
+      <button type="button" class="btn btn-outline-warning mb-1 mb-md-0">Warning</button>
+      <button type="button" class="btn btn-outline-info mb-1 mb-md-0">Info</button>
+      <button type="button" class="btn btn-outline-light mb-1 mb-md-0">Light</button>
+      <button type="button" class="btn btn-outline-dark mb-1 mb-md-0">Dark</button>
+    </div>
+    <app-code-preview [codeContent]="outlineButtonsCode"></app-code-preview>
+    
+    <hr>
+
+    <h4 #sizes>Sizes</h4>
+    <p class="mb-3">Fancy larger or smaller buttons? Add <code>.btn-lg</code> or <code>.btn-sm</code> for additional sizes.</p>
+    <div class="example">
+      <button type="button" class="btn btn-primary btn-lg me-1 mb-1 mb-md-0">Large button</button>
+      <button type="button" class="btn btn-primary me-1 mb-1 mb-md-0">Default button</button>
+      <button type="button" class="btn btn-primary btn-sm me-1 mb-1 mb-md-0">Small button</button>        
+      <button type="button" class="btn btn-primary btn-xs mb-1 mb-md-0">Extra small</button>        
+    </div>
+    <app-code-preview [codeContent]="buttonSizesCode"></app-code-preview>
+
+    <p class="mb-3">Create block level buttons—those that span the full width of a parent.</p>
+    <div class="example">
+      <div class="d-grid gap-2">
+        <button type="button" class="btn btn-primary">Block level button</button>
+        <button type="button" class="btn btn-secondary">Block level button</button>
+      </div>
+    </div>
+    <app-code-preview [codeContent]="blockButtonCode"></app-code-preview>
+    
+    <hr>
+
+    <h4 #active>Active state</h4>
+    <p class="mb-3">Buttons will appear pressed (with a darker background, darker border, and inset shadow) when active. <strong>There’s no need to add a class to <code>&lt;button&gt;</code>s as they use a pseudo-class</strong>. However, you can still force the same active appearance with <code>.active</code> (and include the <code>aria-pressed="true"</code> attribute) should you need to replicate the state programmatically.</p>
+    <div class="example">
+      <a href="" (click)="false" class="btn btn-primary active" role="button" aria-pressed="true">Primary link</a>
+      <a href="" (click)="false" class="btn btn-secondary active" role="button" aria-pressed="true">Link</a>       
+    </div>
+    <app-code-preview [codeContent]="activeStateButtonCode"></app-code-preview>
+    
+    <hr>
+
+    <h4 #disabled>Disabled state</h4>
+    <p class="mb-3">Make buttons look inactive by adding the <code>disabled</code> boolean attribute to any <code>&lt;button&gt;</code> element.</p>
+    <div class="example">
+      <button type="button" class="btn btn-primary" disabled>Primary button</button>
+      <button type="button" class="btn btn-secondary" disabled>Button</button>     
+    </div>
+    <app-code-preview [codeContent]="disabledStateButtonCode"></app-code-preview>
+
+    <p class="mb-3">Disabled buttons using the <code>&lt;a&gt;</code> element behave a bit different. <code>&lt;a&gt;</code>s don’t support the <code>disabled</code> attribute, so you must add the <code>.disabled</code> class to make it visually appear disabled.</p>
+    <div class="example">
+      <a href="" (click)="false" class="btn btn-primary disabled" tabindex="-1" role="button" aria-disabled="true">Primary link</a>
+      <a href="" (click)="false" class="btn btn-secondary disabled" tabindex="-1" role="button" aria-disabled="true">Link</a>   
+    </div>
+    <app-code-preview [codeContent]="disabledStateLinkButtonCode"></app-code-preview>
+    
+    <hr>
+
+    <h4 #withIcon>Icon buttons</h4>
+    <p class="mb-3">Add class <code>.btn-icon</code> for buttons with only icons.</p>
+    <div class="example">
+      <button type="button" class="btn btn-primary btn-icon">
+        <i class="feather icon-check-square"></i>
+      </button>
+      <button type="button" class="btn btn-danger btn-icon">
+        <i class="feather icon-box"></i>
+      </button>
+    </div>
+    <app-code-preview [codeContent]="iconButtonCode"></app-code-preview>
+    
+    <hr>
+
+    <h4 #withIconText>Button with text and icon</h4>
+    <p class="mb-3">Wrap icon and text inside <code>.btn-icon-text</code> and use <code>.btn-icon-prepend</code> or <code>.btn-icon-append</code> for icon tags.</p>
+    <div class="example">
+      <button type="button" class="btn btn-primary btn-icon-text mb-1 mb-md-0">
+        <i class="feather icon-check-square btn-icon-prepend"></i>
+        Button with Icon
+      </button>
+      <button type="button" class="btn btn-primary btn-icon-text mb-1 mb-md-0">
+        Button with Icon
+        <i class="feather icon-box btn-icon-append"></i>
+      </button>
+    </div>
+    <app-code-preview [codeContent]="iconTextButtonCode"></app-code-preview>
+
+    <hr>
+
+    <h4 #socialIcon>Social icon buttons</h4>
+    <div class="example">
+      <button type="button" class="btn btn-icon btn-facebook">
+        <i class="feather icon-facebook"></i>
+      </button>
+      <button type="button" class="btn btn-icon btn-instagram">
+        <i class="feather icon-instagram"></i>
+      </button>
+      <button type="button" class="btn btn-icon btn-twitter">
+        <i class="feather icon-twitter"></i>
+      </button>
+      <button type="button" class="btn btn-icon btn-youtube">
+        <i class="feather icon-youtube"></i>
+      </button>
+      <button type="button" class="btn btn-icon btn-github">
+        <i class="feather icon-github"></i>
+      </button>
+      <button type="button" class="btn btn-icon btn-linkedin">
+        <i class="feather icon-linkedin"></i>
+      </button>
+      <button type="button" class="btn btn-icon btn-outline-twitter">
+        <i class="feather icon-twitter"></i>
+      </button>    
+    </div>
+    <app-code-preview [codeContent]="socialIconButtonCode"></app-code-preview>
+    
+    <hr>
+
+    <h4 #socialIconText>Social buttons with icon and text</h4>
+    <div class="example">
+      <button type="button" class="btn btn-icon-text btn-facebook">
+        <i class="feather icon-facebook btn-icon-prepend"></i>
+        Facebook
+      </button>
+      <button type="button" class="btn btn-icon-text btn-instagram">
+        <i class="feather icon-instagram btn-icon-prepend"></i>
+        Instagram
+      </button>
+      <button type="button" class="btn btn-icon-text btn-twitter">
+        <i class="feather icon-twitter btn-icon-prepend"></i>
+        Twitter
+      </button>
+      <button type="button" class="btn btn-icon-text btn-youtube">
+        <i class="feather icon-youtube btn-icon-prepend"></i>
+        Youtube
+      </button>
+      <button type="button" class="btn btn-icon-text btn-github">
+        <i class="feather icon-github btn-icon-prepend"></i>
+        Github
+      </button>
+      <button type="button" class="btn btn-icon-text btn-linkedin">
+        <i class="feather icon-linkedin btn-icon-prepend"></i>
+        LinkedIn
+      </button>
+      <button type="button" class="btn btn-icon-text btn-outline-twitter">
+        <i class="feather icon-twitter btn-icon-prepend"></i>
+        Twitter
+      </button>   
+    </div>
+    <app-code-preview [codeContent]="socialIconTextButtonCode"></app-code-preview>
+    
+  </div>
+  <div class="col-xl-2 content-nav-wrapper">
+    <ul class="nav content-nav d-flex flex-column">
+      <li class="nav-item">
+        <a (click)="scrollTo(default)" class="nav-link">Basic example</a>
+      </li>
+      <li class="nav-item">
+        <a (click)="scrollTo(tags)" class="nav-link">Button tags</a>
+      </li>
+      <li class="nav-item">
+        <a (click)="scrollTo(outline)" class="nav-link">Outline buttons</a>
+      </li>
+      <li class="nav-item">
+        <a (click)="scrollTo(sizes)" class="nav-link">Button sizes</a>
+      </li>
+      <li class="nav-item">
+        <a (click)="scrollTo(active)" class="nav-link">Active state</a>
+      </li>
+      <li class="nav-item">
+        <a (click)="scrollTo(disabled)" class="nav-link">Disabled state</a>
+      </li>
+      <li class="nav-item">
+        <a (click)="scrollTo(withIcon)" class="nav-link">Icon buttons</a>
+      </li>
+      <li class="nav-item">
+        <a (click)="scrollTo(withIconText)" class="nav-link">With icon and text</a>
+      </li>
+      <li class="nav-item">
+        <a (click)="scrollTo(socialIcon)" class="nav-link">Social icon</a>
+      </li>
+      <li class="nav-item">
+        <a (click)="scrollTo(socialIconText)" class="nav-link">Social icon and text</a>
+      </li>
+      
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,144 @@
+<nav class="page-breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a routerLink=".">Advanced UI</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Owl Carousel</li>
+  </ol>
+</nav>
+
+<div class="row">
+  <div class="col-md-12 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Owl Carousel 2</h4>
+        <p class=“text-muted”>Read the <a href="https://github.com/vitalii-andriiovskyi/ngx-owl-carousel-o" target="_blank"> Official Ngx-Owl-Carousel-O Plugin Documentation </a>for a full list of instructions and other options.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h6 class="card-title">Basic Example</h6>
+        <owl-carousel-o [options]="basicExampleOptions">
+          <ng-template carouselSlide *ngFor="let slide of slidesStore" [id]="slide.id">
+            <img [src]="slide.src" [alt]="slide.alt" [title]="slide.title">
+          </ng-template>
+        </owl-carousel-o>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-12 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h6 class="card-title">Auto Play</h6>
+        <owl-carousel-o [options]="autoPlayExampleOptions">
+          <ng-template carouselSlide *ngFor="let slide of slidesStore" [id]="slide.id">
+            <img [src]="slide.src" [alt]="slide.alt" [title]="slide.title">
+          </ng-template>
+        </owl-carousel-o>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6 grid-margin grid-margin-md-0 stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h6 class="card-title">Animation</h6>
+        <p class="text-muted mb-3">fadeout</p>
+        <owl-carousel-o [options]="animationFadeoutExampleOptions">
+          <ng-template carouselSlide>
+            <div class="slide">
+                <img src="http://via.placeholder.com/453x283">
+            </div>
+          </ng-template>
+          <ng-template carouselSlide>
+            <div class="slide">
+                <img src="http://via.placeholder.com/453x283">
+            </div>
+          </ng-template>
+          <ng-template carouselSlide>
+            <div class="slide">
+                <img src="http://via.placeholder.com/453x283">
+            </div>
+          </ng-template>
+          <ng-template carouselSlide>
+            <div class="slide">
+                <img src="http://via.placeholder.com/453x283">
+            </div>
+          </ng-template>
+          <ng-template carouselSlide>
+            <div class="slide">
+                <img src="http://via.placeholder.com/453x283">
+            </div>
+          </ng-template>
+          <ng-template carouselSlide>
+            <div class="slide">
+                <img src="http://via.placeholder.com/453x283">
+            </div>
+          </ng-template>
+          <ng-template carouselSlide>
+            <div class="slide">
+                <img src="http://via.placeholder.com/453x283">
+            </div>
+          </ng-template>
+          <ng-template carouselSlide>
+            <div class="slide">
+                <img src="http://via.placeholder.com/453x283">
+            </div>
+          </ng-template>
+        </owl-carousel-o>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6 stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h6 class="card-title">Animation</h6>
+        <p class="text-muted mb-3">Using <a href="https://daneden.github.io/animate.css/" target="_blank">animate.css</a> library.</p>
+        <owl-carousel-o [options]="animateCssExampleOptions">
+          <ng-template carouselSlide>
+            <div class="slide">
+                <img src="http://via.placeholder.com/453x283">
+            </div>
+          </ng-template>
+          <ng-template carouselSlide>
+            <div class="slide">
+                <img src="http://via.placeholder.com/453x283">
+            </div>
+          </ng-template>
+          <ng-template carouselSlide>
+            <div class="slide">
+                <img src="http://via.placeholder.com/453x283">
+            </div>
+          </ng-template>
+          <ng-template carouselSlide>
+            <div class="slide">
+                <img src="http://via.placeholder.com/453x283">
+            </div>
+          </ng-template>
+          <ng-template carouselSlide>
+            <div class="slide">
+                <img src="http://via.placeholder.com/453x283">
+            </div>
+          </ng-template>
+          <ng-template carouselSlide>
+            <div class="slide">
+                <img src="http://via.placeholder.com/453x283">
+            </div>
+          </ng-template>
+          <ng-template carouselSlide>
+            <div class="slide">
+                <img src="http://via.placeholder.com/453x283">
+            </div>
+          </ng-template>
+          <ng-template carouselSlide>
+            <div class="slide">
+                <img src="http://via.placeholder.com/453x283">
+            </div>
+          </ng-template>
+        </owl-carousel-o>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,87 @@
+<div>
+  <div class="d-flex align-items-center p-3 border-bottom tx-16">
+    <span class="feather icon-edit icon-md me-2"></span>
+    New message
+  </div>
+</div>
+<div class="p-3 pb-0">
+  <div class="to">
+    <div class="row mb-3">
+      <label class="col-md-2 col-form-label">To:</label>
+      <div class="col-md-10">
+        <ng-select 
+          [items]="peoples" 
+          [multiple]=true
+          bindLabel="name"
+          bindValue="id"
+          [hideSelected]="true"
+          [(ngModel)]="selectedTo">
+          
+          <ng-template ng-label-tmp let-item="item" let-clear="clear">
+            <span class="ng-value-label"><img [src]="item.picture" width="20px" height="20px"> {{item.name}}</span>
+            <span class="ng-value-icon right" (click)="clear(item)" aria-hidden="true">×</span>
+          </ng-template>
+      
+          <ng-template ng-option-tmp let-item="item">
+            <img [src]="item.picture" width="20px" height="20px"> {{item.name}}
+          </ng-template>
+
+        </ng-select>
+      </div>
+    </div>
+  </div>
+  <div class="to cc">
+    <div class="row mb-3">
+      <label class="col-md-2 col-form-label">Cc</label>
+      <div class="col-md-10">
+        <ng-select 
+          [items]="peoples"
+          [multiple]=true
+          bindLabel="name"
+          bindValue="id"
+          [hideSelected]="true"
+          [(ngModel)]="selectedCc">
+
+          <ng-template ng-label-tmp let-item="item" let-clear="clear">
+            <span class="ng-value-label"><img [src]="item.picture" width="20px" height="20px"> {{item.name}}</span>
+            <span class="ng-value-icon right" (click)="clear(item)" aria-hidden="true">×</span>
+          </ng-template>
+      
+          <ng-template ng-option-tmp let-item="item">
+            <img [src]="item.picture" width="20px" height="20px"> {{item.name}}
+          </ng-template>
+          
+        </ng-select>
+      </div>
+    </div>
+  </div>
+  <div class="subject">
+    <div class="row mb-3">
+      <label class="col-md-2 col-form-label">Subject</label>
+      <div class="col-md-10">
+        <input class="form-control" type="text">
+      </div>
+    </div>
+  </div>
+</div>
+<div class="px-3">
+  <div class="col-md-12">
+    <div class="mb-3">
+      <label class="form-label visually-hidden">Descriptions </label>
+
+      <quill-editor [(ngModel)]="messageValue"
+        placeholder="Enter Text"
+        [modules]="quillConfig"
+        (onSelectionChanged)="onSelectionChanged($event)"
+        (onContentChanged)="onContentChanged($event)">
+      </quill-editor>
+
+    </div>
+  </div>
+  <div>
+    <div class="col-md-12">
+      <button class="btn btn-primary me-1 mb-1" type="submit"> Send</button>
+      <button class="btn btn-secondary me-1 mb-1" type="button"> Cancel</button>
+    </div>
+  </div>
+</div>

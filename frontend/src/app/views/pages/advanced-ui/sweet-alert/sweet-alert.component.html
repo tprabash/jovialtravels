@@ -1,0 +1,97 @@
+<nav class="page-breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a routerLink=".">Advanced UI</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Sweet Alert</li>
+  </ol>
+</nav>
+
+<div class="row">
+  <div class="col-md-12 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">SweetAlert2</h4>
+        <p class=“text-muted”>Read the <a href="https://github.com/sweetalert2/ngx-sweetalert2" target="_blank"> Official NgxSweetAlert2 Documentation </a>for a full list of instructions and other options.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-4 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body d-flex flex-column align-items-center">
+        <p class="text-muted mb-3">Basic Alert</p>
+        <button [swal]="{title: '', text: 'Any fool can use a computer', icon: undefined, confirmButtonText: 'Close' }" class="btn btn-primary">
+          Click here!
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body d-flex flex-column align-items-center">
+        <p class="text-muted mb-3">A title with a text under</p>
+        <button [swal]="{title: 'The Internet?', text: 'That thing is still around?', icon: 'question'}" class="btn btn-primary">
+          Click here!
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body d-flex flex-column align-items-center">
+        <p class="text-muted mb-3">Mixin example</p>
+        <button [swal]="{ toast: true, position: 'top-end', showConfirmButton: false, timer: 3000, timerProgressBar: true, title: 'Signed in successfully', icon: 'success'}" class="btn btn-primary">
+          Click here!
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-4 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body d-flex flex-column align-items-center">
+        <p class="text-muted mb-3">Custom HTML description and buttons</p>
+        <button [swal]="{title: '<strong>HTML <u>example</u></strong>', icon: 'info',
+          html: '(You can use <b>bold text</b>, <a href=\'http:\/\/github.com\'>links</a> and other HTML tags)',
+          showCloseButton: true,
+          showCancelButton: true,
+          focusConfirm: false,
+          confirmButtonText:'<i class=\'feather icon-thumbs-up\'></i> Great!',
+          confirmButtonAriaLabel: 'Thumbs up, great!',
+          cancelButtonText: '<i class=\'feather icon-thumbs-down\'></i>',
+          cancelButtonAriaLabel: 'Thumbs down'
+        }" class="btn btn-primary">
+          Click here!
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body d-flex flex-column align-items-center">
+        <p class="text-muted mb-3">Custom position</p>
+        <button [swal]="{ position: 'top-end', title: 'Your work has been saved', text: '', showConfirmButton: false, timer: 1500, icon: 'success'}" class="btn btn-primary">
+          Click here!
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body d-flex flex-column align-items-center">
+        <p class="text-muted mb-3">A message with auto close timer</p>
+        <button [swal]="{
+          title: 'Auto close alert!',
+          html: 'I will close in <strong>2</strong> seconds.',
+          timer: 2000,
+          showConfirmButton: false
+        }" class="btn btn-primary">
+          Click here!
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

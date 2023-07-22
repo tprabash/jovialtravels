@@ -1,0 +1,82 @@
+ngb-datepicker {
+  @extend .border;
+  .ngb-dp-header {
+    background-color: darken($card-bg, 3%);
+    padding: .5rem 0;
+    direction: ltr;
+    .ngb-dp-arrow {
+      button {
+        .ngb-dp-navigation-chevron {
+          border-width: .11em .11em 0 0;
+          width: .44rem;
+          height: .44rem;
+        }
+      }
+    }
+    .ngb-dp-navigation-select {
+      select {
+        border-color: $border-color;
+      }
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+  .ngb-dp-content {
+    .ngb-dp-month {
+      .ngb-dp-month-name {
+        background-color: #fff;
+      }
+      .ngb-dp-week {
+        &.ngb-dp-weekdays {
+          margin-bottom: 4px;
+          background-color: #fff;
+          border-top: 1px solid $border-color;
+          border-color: $border-color;
+          .ngb-dp-weekday {
+            color: $primary;
+            font-style: normal;
+            font-size: 95%;
+          }
+        }
+        .ngb-dp-day {
+          &:focus {
+            outline: none;
+          }
+          .btn-light {
+            &:hover,
+            &.active {
+              background-color: rgba($primary, .2);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.range-selection {
+  .form-group.hidden {
+    width: 0;
+    margin: 0;
+    border: none;
+    padding: 0;
+  }
+  .custom-day {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2rem;
+    width: 2rem;
+  }
+  .custom-day.focused {
+    background-color: #e6e6e6;
+  }
+  .custom-day.range, .custom-day:hover {
+    background-color: $primary;
+    color: white;
+  }
+  .custom-day.faded {
+    background-color: rgba($primary, .5);
+  }
+}

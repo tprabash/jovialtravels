@@ -1,0 +1,26 @@
+.pagination {
+  .pagination-separated & {
+    .page-item {
+      margin-left: 2px;
+      margin-right: 2px;
+      &:first-child {
+        margin-left: 0;
+      }
+      &:last-child  {
+        margin-right: 0;
+      }
+      .page-link {
+        border-radius: 4px;
+      }
+    }
+  }
+  .pagination-rounded & {
+    .page-item {
+      margin-right: 3px;
+      margin-left: 3px;
+      .page-link {
+        border-radius: 50px;
+      }
+    }
+  }
+}

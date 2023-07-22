@@ -1,0 +1,128 @@
+/* Buttons */
+
+.btn {  
+  &.btn-rounded {
+    @include border-radius(50px);
+  }
+  &.btn-xs {
+    padding: $btn-padding-y-xs $btn-padding-x-xs;
+    font-size: $btn-font-size-xs;
+  }
+
+  // Button with only icons 
+  &.btn-icon {
+    height: 38px;
+    width: 38px;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    i {
+      font-size: 1.125rem;
+    }
+    svg {
+      height: 18px;
+      width: 18px;
+    }
+    &.btn-xs {
+      width: 30px;
+      height: 30px;
+      i {
+        font-size: .875rem;
+      }
+      svg {
+        height: 14px;
+      }
+    }
+    &.btn-sm {
+      width: 36px;
+      height: 36px;
+      i {
+        font-size: 1rem;
+      }
+      svg {
+        height: 16px;
+        width: 16px;
+      }
+    }
+    &.btn-lg {
+      width: 42px;
+      height: 42px;
+      i {
+        font-size: 1.25rem;
+      }
+      svg {
+        height: 20px;
+        width: 20px;
+      }
+    }
+  }
+
+  // Button with icon and text 
+  &.btn-icon-text {
+    height: 38px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    .btn-icon-prepend {
+      margin-right: .5rem;
+    }
+    .btn-icon-append {
+      margin-left: .5rem;
+    }
+    i {
+      font-size: 1.125rem;
+    }
+    svg {
+      width: 18px;
+      height: 18px;
+    }
+    &.btn-xs {
+      height: 30px;
+      i {
+        font-size: .875rem;
+      }
+      svg {
+        width: 14px;
+        height: 14px;
+      }
+    }
+    &.btn-sm {
+      height: 36px;
+      i {
+        font-size: 1rem;
+      }
+      svg {
+        width: 16px;
+        height: 16px;
+      }
+    }
+    &.btn-lg {
+      height: 42px;
+      i {
+        font-size: 1.25rem;
+      }
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}
+
+// Social buttons
+@each $color, $value in $social-colors {
+  .btn-#{$color} {
+    @include social-button(social-color($color));
+  }
+  .btn-outline-#{$color} {
+    @include social-outline-button(social-color($color));
+  }
+}
+
+// Inverse buttons 
+@each $color, $value in $theme-colors {
+  .btn-inverse-#{$color} {
+    @include button-inverse-variant($value);
+  }
+}

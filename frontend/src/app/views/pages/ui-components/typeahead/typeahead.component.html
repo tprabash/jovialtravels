@@ -1,0 +1,48 @@
+<div class="row">
+  <div class="col-xl-10 main-content ps-xl-4 pe-xl-5">
+    <h1 class="page-title">Typeahead</h1>
+    <p class="lead">A component that helps with text highlighting. Read the <a href="https://ng-bootstrap.github.io/#/components/typeahead/examples" target="_blank">Official Ng-Bootstrap Documentation</a> for a full list of instructions and other options.</p>
+    
+    <hr>
+    
+    <h4 #default>Basic Example</h4>
+    <div class="example">
+      <p>A typeahead example that gets values from a static <code>string[]</code></p>
+      <ul class="mt-2">
+        <li>kicks in only if 2+ characters typed</li>
+        <li>limits to 10 results</li>
+      </ul>
+      
+      <label for="typeahead-basic" class="form-label">Search for a state:</label>
+      <input id="typeahead-basic" type="text" class="form-control" [(ngModel)]="model" [ngbTypeahead]="search"/>
+      <p class="text-muted mt-2">Model: {{ model | json }}</p>
+    </div>
+    <app-code-preview [codeContent]="defaultTypeaheadCode"></app-code-preview>
+
+    <hr>
+    
+    <h4 #resultTemplate>Template for results</h4>
+    <div class="example">
+      <ng-template #rt let-r="result" let-t="term">
+        <img [src]="'https://upload.wikimedia.org/wikipedia/commons/thumb/' + r['flag']" class="me-1" style="width: 16px">
+        <ngb-highlight [result]="r.name" [term]="t"></ngb-highlight>
+      </ng-template>
+      
+      <label for="typeahead-template" class="form-label">Search for a state:</label>
+      <input id="typeahead-template" type="text" class="form-control" [(ngModel)]="resultTemplatemodel" [ngbTypeahead]="resultTemplateSearch" [resultTemplate]="rt"
+        [inputFormatter]="formatter" />
+
+      <p class="text-muted mt-2">Model: {{ resultTemplatemodel | json }}</p>
+    </div>
+    <app-code-preview [codeContent]="resultTemplateCode"></app-code-preview>
+
+    
+  </div>
+  <div class="col-xl-2 content-nav-wrapper">
+    <ul class="nav content-nav d-flex flex-column">
+      <li class="nav-item">
+        <a (click)="scrollTo(default)" class="nav-link">Basic example</a>
+      </li>
+    </ul>
+  </div>
+</div>

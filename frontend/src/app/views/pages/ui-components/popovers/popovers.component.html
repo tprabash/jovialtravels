@@ -1,0 +1,46 @@
+<div class="row">
+  <div class="col-xl-10 main-content ps-xl-4 pe-xl-5">
+    <h1 class="page-title">Popovers</h1>
+    <p class="lead">Documentation and examples for adding Bootstrap popovers, like those found in iOS, to any element on your site. Read the <a href="https://ng-bootstrap.github.io/#/components/popover/examples" target="_blank">Official Ng-Bootstrap Documentation</a> for a full list of instructions and other options.</p>
+    
+    <hr>
+    
+    <h4 #default>Basic example</h4>
+    <div class="example">
+      <button type="button" class="btn btn-primary" popoverTitle="Popover title" ngbPopover="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
+    </div>
+    <app-code-preview [codeContent]="defaultPopoverCode"></app-code-preview>
+    
+    <hr>
+    
+    <h4 #directions>Four directions</h4>
+    <p class="mb-3">Four options are available: top, right, bottom, and left aligned.</p>
+    <div class="example">
+      <button type="button" class="btn btn-primary mb-1 mb-md-0" placement="top" ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+        Popover on top
+      </button>
+      <button type="button" class="btn btn-primary mb-1 mb-md-0" placement="end" ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+        Popover on right
+      </button>
+      <button type="button" class="btn btn-primary" placement="bottom" ngbPopover="Vivamus
+      sagittis lacus vel augue laoreet rutrum faucibus.">
+        Popover on bottom
+      </button>
+      <button type="button" class="btn btn-primary" placement="start" ngbPopover="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+        Popover on left
+      </button>
+    </div>
+    <app-code-preview [codeContent]="popoverDirecionsCode"></app-code-preview>
+    
+  </div>
+  <div class="col-xl-2 content-nav-wrapper">
+    <ul class="nav content-nav d-flex flex-column">
+      <li class="nav-item">
+        <a (click)="scrollTo(default)" class="nav-link">Basic example</a>
+      </li>
+      <li class="nav-item">
+        <a (click)="scrollTo(directions)" class="nav-link">Four directions</a>
+      </li>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,144 @@
+<nav class="page-breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a routerLink=".">Advanced UI</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Ngx-SortableJs</li>
+  </ol>
+</nav>
+
+<div class="row">
+  <div class="col-md-12 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Ngx-SortableJs</h4>
+        <p class=“text-muted”>Reorderable drag-and-drop lists for modern browsers and touch devices. Read the <a href="https://github.com/SortableJS/ngx-sortablejs" target="_blank"> Official Ngx-SortableJs Documentation </a>for a full list of instructions and other options.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h6 class="card-title mb-3">Simple list</h6>
+        <ul class="list-group" [sortablejs]="simpleItems">
+          <li class="list-group-item" *ngFor="let item of simpleItems">{{ item }}</li>
+        </ul>
+        <div class="p-3 rounded bg-gray-200 text-dark mt-3"> {{ simpleItems | json }} </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h6 class="card-title mb-3">Handle</h6>
+        <ul class="list-group" [sortablejs]="simpleItems" [sortablejsOptions]="{ handle: '.handle' }">
+          <li class="list-group-item" *ngFor="let item of simpleItems"> <i data-feather="move" appFeatherIcon class="icon-sm handle me-2"></i> {{ item }}</li>
+        </ul>
+        <div class="p-3 rounded bg-gray-200 text-dark mt-3"> {{ simpleItems | json }} </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h6 class="card-title mb-3">Transfer between lists</h6>
+        <p class="text-muted mb-3">These lists are connected together. You can drag / drop elements across the lists.</p>
+        <div class="row">
+          <div class="col">
+            <ul class="list-group" [sortablejs]="sharedItems1" [sortablejsOptions]="sharedOptions">
+              <li class="list-group-item list-group-item-primary" *ngFor="let item of sharedItems1">{{ item }}</li>
+            </ul>
+            <div class="p-3 rounded bg-gray-200 text-dark mt-3"> {{ sharedItems1 | json }} </div>
+          </div>
+          <div class="col">
+            <ul class="list-group" [sortablejs]="sharedItems2" [sortablejsOptions]="sharedOptions">
+              <li class="list-group-item list-group-item-info" *ngFor="let item of sharedItems2">{{ item }}</li>
+            </ul>
+            <div class="p-3 rounded bg-gray-200 text-dark mt-3"> {{ sharedItems2 | json }} </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h6 class="card-title mb-3">Clone Items</h6>
+        <p class="text-muted mb-3">Try dragging from one list to another. The item you drag will be cloned and the clone will stay in the original list.</p>
+        <div class="row">
+          <div class="col">
+            <ul class="list-group" [sortablejs]="cloneItems1" [sortablejsOptions]="clone1Options">
+              <li class="list-group-item list-group-item-primary" *ngFor="let item of cloneItems1">{{ item }}</li>
+            </ul>
+            <div class="p-3 rounded bg-gray-200 text-dark mt-3"> {{ cloneItems1 | json }} </div>
+          </div>
+          <div class="col">
+            <ul class="list-group" [sortablejs]="cloneItems2" [sortablejsOptions]="clone2Options">
+              <li class="list-group-item list-group-item-info" *ngFor="let item of cloneItems2">{{ item }}</li>
+            </ul>
+            <div class="p-3 rounded bg-gray-200 text-dark mt-3"> {{ cloneItems2 | json }} </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h6 class="card-title mb-3">Disabling Sorting</h6>
+        <p class="text-muted mb-3">Try sorting the list on the left. It is not possible because it has it's sort option set to false. However, you can still drag from the list on the left to the list on the right.</p>
+        <div class="row">
+          <div class="col">
+            <ul class="list-group" [sortablejs]="disablingSortingItems1" [sortablejsOptions]="disablingSorting1Options">
+              <li class="list-group-item list-group-item-primary" *ngFor="let item of disablingSortingItems1">{{ item }}</li>
+            </ul>
+            <div class="p-3 rounded bg-gray-200 text-dark mt-3"> {{ disablingSortingItems1 | json }} </div>
+          </div>
+          <div class="col">
+            <ul class="list-group" [sortablejs]="disablingSortingItems2" [sortablejsOptions]="disablingSorting2Options">
+              <li class="list-group-item list-group-item-info" *ngFor="let item of disablingSortingItems2">{{ item }}</li>
+            </ul>
+            <div class="p-3 rounded bg-gray-200 text-dark mt-3"> {{ disablingSortingItems2 | json }} </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6 grid-margin grid-margin-md-0 stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h6 class="card-title mb-3">Disabled Optons</h6>
+        <p class="text-muted mb-3">The 'Item 3' is disabled.</p>
+        <ul class="list-group" [sortablejs]="draggableItems" [sortablejsOptions]="draggableOptions">
+          <li class="list-group-item" *ngFor="let item of draggableItems" [class.draggable]="item.draggable" [class.disabled]="!item.draggable">{{ item.text }}</li>
+        </ul>
+        <div class="p-3 rounded bg-gray-200 text-dark mt-3"> {{ draggableItems | json }} </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6 stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h6 class="card-title mb-3">Events</h6>
+        <p class="text-muted mb-3">You can use the options' <code>onUpdate</code> method to track the changes.</p>
+        <ul class="list-group" [sortablejs]="eventItems" [sortablejsOptions]="eventOptions">
+          <li class="list-group-item" *ngFor="let item of eventItems"> Item {{ item }}</li>
+        </ul>
+        <div class="p-3 rounded bg-gray-200 text-dark mt-3"> Updated {{ eventUpdateCounter }} times </div>
+      </div>
+    </div>
+  </div>
+</div>

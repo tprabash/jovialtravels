@@ -1,0 +1,232 @@
+<nav class="page-breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a routerLink=".">Charts & graphs</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Ng-apexcharts</li>
+  </ol>
+</nav>
+
+<div class="row">
+  <div class="col-md-12 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Ng-ApexCharts</h4>
+        <p class=“text-muted”>Read the <a href="https://github.com/apexcharts/ng-apexcharts" target="_blank"> Official Ng-ApexCharts Documentation </a>for a full list of instructions and other options.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xl-6 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h6 class="card-title">Line chart</h6>
+
+        <apx-chart
+          [series]="lineChartOptions.series"
+          [chart]="lineChartOptions.chart"
+          [colors]="lineChartOptions.colors"
+          [grid]="lineChartOptions.grid"
+          [xaxis]="lineChartOptions.xaxis"
+          [yaxis]="lineChartOptions.yaxis"
+          [markers]="lineChartOptions.markers"
+          [legend]="lineChartOptions.legend"
+          [stroke]="lineChartOptions.stroke"
+        ></apx-chart>
+
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-6 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h6 class="card-title">Bar chart</h6>
+
+        <apx-chart
+          [series]="barChartOptions.series"
+          [chart]="barChartOptions.chart"
+          [colors]="barChartOptions.colors"
+          [grid]="barChartOptions.grid"
+          [xaxis]="barChartOptions.xaxis"
+          [yaxis]="barChartOptions.yaxis"
+          [plotOptions]="barChartOptions.plotOptions"
+        ></apx-chart>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xl-6 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h6 class="card-title">Area chart</h6>
+
+        <apx-chart
+          [series]="areaChartOptions.series"
+          [chart]="areaChartOptions.chart"
+          [colors]="areaChartOptions.colors"
+          [stroke]="areaChartOptions.stroke"
+          [dataLabels]="areaChartOptions.dataLabels"
+          [xaxis]="areaChartOptions.xaxis"
+          [yaxis]="areaChartOptions.yaxis"
+          [grid]="areaChartOptions.grid"
+          [tooltip]="areaChartOptions.tooltip"
+          [fill]="areaChartOptions.fill"
+          [legend]="areaChartOptions.legend"
+        ></apx-chart>
+
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-6 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h6 class="card-title">Mixed chart</h6>
+
+        <apx-chart
+          [series]="mixedChartOptions.series"
+          [chart]="mixedChartOptions.chart"
+          [colors]="mixedChartOptions.colors"
+          [grid]="mixedChartOptions.grid"
+          [stroke]="mixedChartOptions.stroke"
+          [plotOptions]="mixedChartOptions.plotOptions"
+          [legend]="mixedChartOptions.legend"
+          [fill]="mixedChartOptions.fill"
+          [labels]="mixedChartOptions.labels"
+          [markers]="mixedChartOptions.markers"
+          [xaxis]="mixedChartOptions.xaxis"
+          [yaxis]="mixedChartOptions.yaxis"
+          [tooltip]="mixedChartOptions.tooltip"
+        ></apx-chart>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xl-6 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h6 class="card-title">Donut chart</h6>
+
+        <apx-chart
+          [series]="donutChartOptions.series"
+          [chart]="donutChartOptions.chart"
+          [colors]="donutChartOptions.colors"
+          [stroke]="donutChartOptions.stroke"
+          [legend]="donutChartOptions.legend"
+          [dataLabels]="donutChartOptions.dataLabels"
+        ></apx-chart>
+
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-6 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h6 class="card-title">Pie chart</h6>
+
+        <apx-chart
+          [series]="pieChartOptions.series"
+          [chart]="pieChartOptions.chart"
+          [colors]="pieChartOptions.colors"
+          [stroke]="pieChartOptions.stroke"
+          [legend]="pieChartOptions.legend"
+          [dataLabels]="pieChartOptions.dataLabels"
+        ></apx-chart>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xl-6 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h6 class="card-title">HeatMap chart</h6>
+
+        <apx-chart
+          [series]="heatMapChartOptions.series"
+          [chart]="heatMapChartOptions.chart"
+          [colors]="heatMapChartOptions.colors"
+          [grid]="heatMapChartOptions.grid"
+          [dataLabels]="heatMapChartOptions.dataLabels"
+          [stroke]="heatMapChartOptions.stroke"
+          [xaxis]="heatMapChartOptions.xaxis"
+          [yaxis]="heatMapChartOptions.yaxis"
+          [title]="heatMapChartOptions.title"
+          [plotOptions]="heatMapChartOptions.plotOptions"
+          [theme]="heatMapChartOptions.theme"
+        ></apx-chart>
+
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-6 grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h6 class="card-title">Radar chart</h6>
+
+        <apx-chart
+          [series]="radarChartOptions.series"
+          [chart]="radarChartOptions.chart"
+          [colors]="radarChartOptions.colors"
+          [grid]="radarChartOptions.grid"
+          [legend]="radarChartOptions.legend"
+          [labels]="radarChartOptions.labels"
+          [stroke]="radarChartOptions.stroke"
+          [fill]="radarChartOptions.fill"
+          [xaxis]="radarChartOptions.xaxis"
+          [yaxis]="radarChartOptions.yaxis"
+          [markers]="radarChartOptions.markers"
+          [plotOptions]="radarChartOptions.plotOptions"
+        ></apx-chart>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xl-6 grid-margin grid-margin-xl-0 stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h6 class="card-title">Scatter chart</h6>
+
+        <apx-chart
+          [series]="scatterChartOptions.series"
+          [chart]="scatterChartOptions.chart"
+          [colors]="scatterChartOptions.colors"
+          [grid]="scatterChartOptions.grid"
+          [markers]="scatterChartOptions.markers"
+          [legend]="scatterChartOptions.legend"
+          [xaxis]="scatterChartOptions.xaxis"
+          [yaxis]="scatterChartOptions.yaxis"
+        ></apx-chart>
+
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-6 stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h6 class="card-title">RadialBar chart</h6>
+
+        <apx-chart
+          [series]="radialBarChartOptions.series"
+          [chart]="radialBarChartOptions.chart"
+          [colors]="radialBarChartOptions.colors"
+          [grid]="radialBarChartOptions.grid"
+          [plotOptions]="radialBarChartOptions.plotOptions"
+          [labels]="radialBarChartOptions.labels"
+          [legend]="radialBarChartOptions.legend"
+        ></apx-chart>
+
+      </div>
+    </div>
+  </div>
+</div>

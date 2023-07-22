@@ -1,0 +1,77 @@
+<div class="row">
+  <div class="col-xl-10 main-content ps-xl-4 pe-xl-5">
+    <h1 class="page-title">Breadcrumbs</h1>
+    <p class="lead">Indicate the current page’s location within a navigational hierarchy that automatically adds seperators via CSS. Read the <a href="https://getbootstrap.com/docs/5.2/components/breadcrumb/" target="_blank">Official Bootstrap Documentation</a> for a full list of instructions and other options.</p>
+    
+    <hr>
+    
+    <h4 #default>Basic example</h4>
+    <div class="example">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a routerLink=".">Home</a></li>
+          <li class="breadcrumb-item"><a routerLink=".">Library</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Data</li>
+        </ol>
+      </nav>
+    </div>
+    <app-code-preview [codeContent]="defaultBreadcrumbCode"></app-code-preview>
+
+    <hr>
+    
+    <h4 #line>Line seperator</h4>
+    <div class="example">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb breadcrumb-line">
+          <li class="breadcrumb-item"><a routerLink=".">Home</a></li>
+          <li class="breadcrumb-item"><a routerLink=".">Library</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Data</li>
+        </ol>
+      </nav>
+    </div>
+    <app-code-preview [codeContent]="lineSeperatorCode"></app-code-preview>
+
+    <hr>
+    
+    <h4 #dot>Dot seperator</h4>
+    <div class="example">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb breadcrumb-dot">
+          <li class="breadcrumb-item"><a routerLink=".">Home</a></li>
+          <li class="breadcrumb-item"><a routerLink=".">Library</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Data</li>
+        </ol>
+      </nav>
+    </div>
+    <app-code-preview [codeContent]="dotSeperatorCode"></app-code-preview>
+    
+    <hr>
+    
+    <h4 #changingSeperator>Changing the seperator</h4>
+    <p class="mb-3">Seperators are automatically added in CSS through <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/::before"><code>::before</code></a> and <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/content"><code>content</code></a>. They can be changed by changing <code>$breadcrumb-divider</code>. The <a href="https://sass-lang.com/documentation/Sass/Script/Functions.html#quote-instance_method">quote</a> function is needed to generate the quotes around a string, so if you want <code>&gt;</code> as seperator, you can use this:</p>
+    <app-code-preview [codeContent]="changingSeperatorCode"></app-code-preview>
+
+    <p class="mb-3">It’s also possible to use a base64 embedded SVG icon:</p>
+    <app-code-preview [codeContent]="changingSeperatorSvgCode"></app-code-preview>
+
+    <p class="mb-3">The seperator can be removed by setting <code>$breadcrumb-divider</code> to <code>none</code>:</p>
+    <app-code-preview [codeContent]="changingSeperatorNoneCode"></app-code-preview>
+
+  </div>
+  <div class="col-xl-2 content-nav-wrapper">
+    <ul class="nav content-nav d-flex flex-column">
+      <li class="nav-item">
+        <a (click)="scrollTo(default)" class="nav-link">Basic example</a>
+      </li>
+      <li class="nav-item">
+        <a (click)="scrollTo(line)" class="nav-link">Line seperator</a>
+      </li>
+      <li class="nav-item">
+        <a (click)="scrollTo(dot)" class="nav-link">Dot seperator</a>
+      </li>
+      <li class="nav-item">
+        <a (click)="scrollTo(changingSeperator)" class="nav-link">Changing seperator</a>
+      </li>
+    </ul>
+  </div>
+</div>

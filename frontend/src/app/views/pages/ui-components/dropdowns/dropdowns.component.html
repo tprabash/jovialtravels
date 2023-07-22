@@ -1,0 +1,433 @@
+<div class="row">
+  <div class="col-xl-10 main-content ps-xl-4 pe-xl-5">
+    <h1 class="page-title">Dropdowns</h1>
+    <p class="lead">Toggle contextual overlays for displaying lists of links and more with the Bootstrap dropdown plugin. Read the <a href="https://ng-bootstrap.github.io/#/components/dropdown/examples" target="_blank">Official Ng-Bootstrap Documentation</a> for a full list of instructions and other options.</p>
+    
+    <hr>
+    
+    <h4 #default>Basic Example</h4>
+    <div class="example">
+      <div ngbDropdown>
+        <button class="btn btn-secondary" id="dropdownBasic1" ngbDropdownToggle>Dropdown button</button>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+          <button ngbDropdownItem>Action - 1</button>
+          <button ngbDropdownItem>Another Action</button>
+          <button ngbDropdownItem>Something else is here</button>
+        </div>
+      </div>
+    </div>
+    <app-code-preview [codeContent]="defaultDropdownCode"></app-code-preview>
+    
+    <hr>
+    
+    <h4 #variations>Dropdown button variations</h4>
+    <p class="mb-3">Add class <code>.btn-*</code> for solid colored buttons.</p>
+    <div class="example">
+      <div class="d-inline-block mb-1 mb-md-0" ngbDropdown>
+        <button class="btn btn-primary" id="dropdownButtonPrimary" ngbDropdownToggle>Primary</button>
+        <div ngbDropdownMenu aria-labelledby="dropdownButtonPrimary">
+          <button ngbDropdownItem>Action - 1</button>
+          <button ngbDropdownItem>Another Action</button>
+          <button ngbDropdownItem>Something else is here</button>
+        </div>
+      </div>
+      <div class="d-inline-block mb-1 mb-md-0" ngbDropdown>
+        <button class="btn btn-secondary" id="dropdownButtonSecondary" ngbDropdownToggle>Secondary</button>
+        <div ngbDropdownMenu aria-labelledby="dropdownButtonSecondary">
+          <button ngbDropdownItem>Action - 1</button>
+          <button ngbDropdownItem>Another Action</button>
+          <button ngbDropdownItem>Something else is here</button>
+        </div>
+      </div>
+      <div class="d-inline-block mb-1 mb-md-0" ngbDropdown>
+        <button class="btn btn-success" id="dropdownButtonSuccess" ngbDropdownToggle>Success</button>
+        <div ngbDropdownMenu aria-labelledby="dropdownButtonSuccess">
+          <button ngbDropdownItem>Action - 1</button>
+          <button ngbDropdownItem>Another Action</button>
+          <button ngbDropdownItem>Something else is here</button>
+        </div>
+      </div>
+      <div class="d-inline-block mb-1 mb-md-0" ngbDropdown>
+        <button class="btn btn-info" id="dropdownButtonInfo" ngbDropdownToggle>Info</button>
+        <div ngbDropdownMenu aria-labelledby="dropdownButtonInfo">
+          <button ngbDropdownItem>Action - 1</button>
+          <button ngbDropdownItem>Another Action</button>
+          <button ngbDropdownItem>Something else is here</button>
+        </div>
+      </div>
+      <div class="d-inline-block mb-1 mb-md-0" ngbDropdown>
+        <button class="btn btn-warning" id="dropdownButtonWarning" ngbDropdownToggle>Warning</button>
+        <div ngbDropdownMenu aria-labelledby="dropdownButtonWarning">
+          <button ngbDropdownItem>Action - 1</button>
+          <button ngbDropdownItem>Another Action</button>
+          <button ngbDropdownItem>Something else is here</button>
+        </div>
+      </div>
+      <div class="d-inline-block mb-1 mb-md-0" ngbDropdown>
+        <button class="btn btn-danger" id="dropdownButtonDanger" ngbDropdownToggle>Danger</button>
+        <div ngbDropdownMenu aria-labelledby="dropdownButtonDanger">
+          <button ngbDropdownItem>Action - 1</button>
+          <button ngbDropdownItem>Another Action</button>
+          <button ngbDropdownItem>Something else is here</button>
+        </div>
+      </div>
+    </div>
+    <app-code-preview [codeContent]="dropdownButtonVariationsCode"></app-code-preview>
+    
+    <hr>
+    
+    <h4 #split>Split button</h4>
+    <p class="mb-3">Similarly, create split button dropdowns with virtually the same markup as single button dropdowns, but with the addition of <code>.dropdown-toggle-split</code> for proper spacing around the dropdown caret.</p>
+    <div class="example">
+      <div class="btn-group mb-1 mb-md-0">
+        <button type="button" class="btn btn-primary">Primary</button>
+        <div class="btn-group" ngbDropdown role="group">
+          <button class="btn btn-primary dropdown-toggle-split" ngbDropdownToggle></button>
+          <div ngbDropdownMenu>
+            <button ngbDropdownItem>Action - 1</button>
+            <button ngbDropdownItem>Another Action</button>
+            <button ngbDropdownItem>Something else is here</button>
+          </div>
+        </div>
+      </div>
+      <div class="btn-group mb-1 mb-md-0">
+        <button type="button" class="btn btn-secondary">Secondary</button>
+        <div class="btn-group" ngbDropdown role="group">
+          <button class="btn btn-secondary dropdown-toggle-split" ngbDropdownToggle></button>
+          <div ngbDropdownMenu>
+            <button ngbDropdownItem>Action - 1</button>
+            <button ngbDropdownItem>Another Action</button>
+            <button ngbDropdownItem>Something else is here</button>
+          </div>
+        </div>
+      </div>
+      <div class="btn-group mb-1 mb-md-0">
+        <button type="button" class="btn btn-success">Success</button>
+        <div class="btn-group" ngbDropdown role="group">
+          <button class="btn btn-success dropdown-toggle-split" ngbDropdownToggle></button>
+          <div ngbDropdownMenu>
+            <button ngbDropdownItem>Action - 1</button>
+            <button ngbDropdownItem>Another Action</button>
+            <button ngbDropdownItem>Something else is here</button>
+          </div>
+        </div>
+      </div>
+      <div class="btn-group mb-1 mb-md-0">
+        <button type="button" class="btn btn-info">Info</button>
+        <div class="btn-group" ngbDropdown role="group">
+          <button class="btn btn-info dropdown-toggle-split" ngbDropdownToggle></button>
+          <div ngbDropdownMenu>
+            <button ngbDropdownItem>Action - 1</button>
+            <button ngbDropdownItem>Another Action</button>
+            <button ngbDropdownItem>Something else is here</button>
+          </div>
+        </div>
+      </div>
+      <div class="btn-group mb-1 mb-md-0">
+        <button type="button" class="btn btn-warning">Warning</button>
+        <div class="btn-group" ngbDropdown role="group">
+          <button class="btn btn-warning dropdown-toggle-split" ngbDropdownToggle></button>
+          <div ngbDropdownMenu>
+            <button ngbDropdownItem>Action - 1</button>
+            <button ngbDropdownItem>Another Action</button>
+            <button ngbDropdownItem>Something else is here</button>
+          </div>
+        </div>
+      </div>
+      <div class="btn-group mb-1 mb-md-0">
+        <button type="button" class="btn btn-danger">Danger</button>
+        <div class="btn-group" ngbDropdown role="group">
+          <button class="btn btn-danger dropdown-toggle-split" ngbDropdownToggle></button>
+          <div ngbDropdownMenu>
+            <button ngbDropdownItem>Action - 1</button>
+            <button ngbDropdownItem>Another Action</button>
+            <button ngbDropdownItem>Something else is here</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <app-code-preview [codeContent]="splitButtonCode"></app-code-preview>
+
+    <hr>
+    
+    <h4 #sizing>Sizing</h4>
+    <p class="mb-3">Button dropdowns work with buttons of all sizes, including default and split dropdown buttons.</p>
+    <div class="example">
+      <!-- Large button groups (default and split) -->
+      <div class="btn-toolbar">
+        <div class="btn-group mb-1 mb-md-0 me-1" ngbDropdown>
+          <button class="btn btn-secondary btn-lg" id="dropdownButtonLg" ngbDropdownToggle>Large button</button>
+          <div ngbDropdownMenu aria-labelledby="dropdownButtonLg">
+            <button ngbDropdownItem>Action - 1</button>
+            <button ngbDropdownItem>Another Action</button>
+            <button ngbDropdownItem>Something else is here</button>
+          </div>
+        </div>
+        <div class="btn-group mb-1 mb-md-0">
+          <button type="button" class="btn btn-secondary btn-lg">Large split button</button>
+          <div class="btn-group" ngbDropdown role="group">
+            <button class="btn btn-secondary dropdown-toggle-split" ngbDropdownToggle></button>
+            <div ngbDropdownMenu>
+              <button ngbDropdownItem>Action - 1</button>
+              <button ngbDropdownItem>Another Action</button>
+              <button ngbDropdownItem>Something else is here</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Large button groups (default and split) -->
+      <div class="btn-toolbar">
+        <div class="btn-group mb-1 mb-md-0 me-1" ngbDropdown>
+          <button class="btn btn-secondary btn-sm" id="dropdownButtonLg" ngbDropdownToggle>Small button</button>
+          <div ngbDropdownMenu aria-labelledby="dropdownButtonLg">
+            <button ngbDropdownItem>Action - 1</button>
+            <button ngbDropdownItem>Another Action</button>
+            <button ngbDropdownItem>Something else is here</button>
+          </div>
+        </div>
+        <div class="btn-group mb-1 mb-md-0">
+          <button type="button" class="btn btn-secondary btn-sm">Small split button</button>
+          <div class="btn-group" ngbDropdown role="group">
+            <button class="btn btn-secondary dropdown-toggle-split" ngbDropdownToggle></button>
+            <div ngbDropdownMenu>
+              <button ngbDropdownItem>Action - 1</button>
+              <button ngbDropdownItem>Another Action</button>
+              <button ngbDropdownItem>Something else is here</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <app-code-preview [codeContent]="buttonSizingCode"></app-code-preview>
+    
+    <hr>
+    
+    <h4 #dropup>Dropup</h4>
+    <p class="mb-3">Trigger dropdown menus above elements by adding <code>placement="top-end"</code> to the parent element.</p>
+    <div class="example">
+      <div ngbDropdown placement="top-end" class="btn-group mb-1 mb-md-0">
+        <button class="btn btn-secondary" id="dropupMenu" ngbDropdownToggle>Dropup</button>
+        <div ngbDropdownMenu aria-labelledby="dropupMenu">
+          <button ngbDropdownItem>Action - 1</button>
+          <button ngbDropdownItem>Another Action</button>
+          <button ngbDropdownItem>Something else is here</button>
+        </div>
+      </div>
+      <div class="btn-group mb-1 mb-md-0">
+        <button type="button" class="btn btn-secondary">Split dropup</button>
+        <div class="btn-group" ngbDropdown placement="top-end" role="group">
+          <button class="btn btn-secondary dropdown-toggle-split" ngbDropdownToggle></button>
+          <div ngbDropdownMenu>
+            <button ngbDropdownItem>Action - 1</button>
+            <button ngbDropdownItem>Another Action</button>
+            <button ngbDropdownItem>Something else is here</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <app-code-preview [codeContent]="dropUpCode"></app-code-preview>
+    
+    <hr>
+    
+    <h4 #dropright>Dropright</h4>
+    <p class="mb-3">Trigger dropdown menus at the right of the elements by adding <code>placement="end-top"</code> to the parent element.</p>
+    <div class="example">
+      <div ngbDropdown placement="end-top" class="btn-group mb-1 mb-md-0">
+        <button class="btn btn-secondary" id="droprightMenu" ngbDropdownToggle>Dropright</button>
+        <div ngbDropdownMenu aria-labelledby="droprightMenu">
+          <button ngbDropdownItem>Action - 1</button>
+          <button ngbDropdownItem>Another Action</button>
+          <button ngbDropdownItem>Something else is here</button>
+        </div>
+      </div>
+      <div class="btn-group mb-1 mb-md-0">
+        <button type="button" class="btn btn-secondary">Split dropright</button>
+        <div class="btn-group" ngbDropdown placement="end-top" role="group">
+          <button class="btn btn-secondary dropdown-toggle-split" ngbDropdownToggle></button>
+          <div ngbDropdownMenu>
+            <button ngbDropdownItem>Action - 1</button>
+            <button ngbDropdownItem>Another Action</button>
+            <button ngbDropdownItem>Something else is here</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <app-code-preview [codeContent]="dropRightCode"></app-code-preview>
+    
+    <hr>
+    
+    <h4 #dropleft>Dropleft</h4>
+    <p class="mb-3">Trigger dropdown menus at the right of the elements by adding <code>placement="start-top"</code> to the parent element.</p>
+    <div class="example">
+      <div ngbDropdown placement="start-top" class="btn-group mb-1 mb-md-0">
+        <button class="btn btn-secondary" id="dropleftMenu" ngbDropdownToggle>Dropleft</button>
+        <div ngbDropdownMenu aria-labelledby="dropleftMenu">
+          <button ngbDropdownItem>Action - 1</button>
+          <button ngbDropdownItem>Another Action</button>
+          <button ngbDropdownItem>Something else is here</button>
+        </div>
+      </div>
+      <div class="btn-group mb-1 mb-md-0">
+        <button type="button" class="btn btn-secondary">Split dropleft</button>
+        <div class="btn-group" ngbDropdown placement="start-top" role="group">
+          <button class="btn btn-secondary dropdown-toggle-split" ngbDropdownToggle></button>
+          <div ngbDropdownMenu>
+            <button ngbDropdownItem>Action - 1</button>
+            <button ngbDropdownItem>Another Action</button>
+            <button ngbDropdownItem>Something else is here</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <app-code-preview [codeContent]="dropLeftCode"></app-code-preview>
+    
+    <hr>
+    
+    <h4 #activeItem>Active menu item</h4>
+    <p class="mb-3">Add <code>.active</code> to items in the dropdown to <strong>style them as active</strong>.</p>
+    <div class="example">
+      <div ngbDropdown>
+        <button class="btn btn-secondary" id="dropdownMenuActiveItem" ngbDropdownToggle>Dropdown button</button>
+        <div ngbDropdownMenu aria-labelledby="dropdownMenuActiveItem">
+          <button ngbDropdownItem>Action - 1</button>
+          <button ngbDropdownItem class="active">Another Action</button>
+          <button ngbDropdownItem>Something else is here</button>
+        </div>
+      </div>
+    </div>
+    <app-code-preview [codeContent]="menuItemActiveCode"></app-code-preview>
+    
+    <hr>
+    
+    <h4 #disabledItem>Disabled menu item</h4>
+    <p class="mb-3">Add <code>.disabled</code> to items in the dropdown to <strong>style them as disabled</strong>.</p>
+    <div class="example">
+      <div ngbDropdown>
+        <button class="btn btn-secondary" id="dropdownMenuDisabledItem" ngbDropdownToggle>Dropdown button</button>
+        <div ngbDropdownMenu aria-labelledby="dropdownMenuDisabledItem">
+          <button ngbDropdownItem>Action - 1</button>
+          <button ngbDropdownItem class="disabled">Another Action</button>
+          <button ngbDropdownItem>Something else is here</button>
+        </div>
+      </div>
+    </div>
+    <app-code-preview [codeContent]="menuItemDisabledCode"></app-code-preview>
+    
+    <hr>
+    
+    <h4 #dropdownHeader>Dropdown header</h4>
+    <p class="mb-3">Add a header to label sections of actions in any dropdown menu.</p>
+    <div class="example">
+      <div ngbDropdown>
+        <button class="btn btn-secondary" id="dropdownHeaderExample" ngbDropdownToggle>Dropdown button</button>
+        <div ngbDropdownMenu aria-labelledby="dropdownHeaderExample">
+          <h6 class="dropdown-header">Dropdown header</h6>
+          <button ngbDropdownItem>Action - 1</button>
+          <button ngbDropdownItem class="disabled">Another Action</button>
+          <button ngbDropdownItem>Something else is here</button>
+        </div>
+      </div>
+    </div>
+    <app-code-preview [codeContent]="dropdownHeaderCode"></app-code-preview>
+    
+    <hr>
+    
+    <h4 #dropdownDividers>Dropdown dividers</h4>
+    <p class="mb-3">Add a header to label sections of actions in any dropdown menu.</p>
+    <div class="example">
+      <div ngbDropdown>
+        <button class="btn btn-secondary" id="dropdownDividerExample" ngbDropdownToggle>Dropdown button</button>
+        <div ngbDropdownMenu aria-labelledby="dropdownDividerExample">
+          <button ngbDropdownItem>Action - 1</button>
+          <button ngbDropdownItem class="disabled">Another Action</button>
+          <button ngbDropdownItem>Something else is here</button>
+          <div class="dropdown-divider"></div>
+          <button ngbDropdownItem>Separated item</button>
+        </div>
+      </div>
+    </div>
+    <app-code-preview [codeContent]="dropdownDividerCode"></app-code-preview>
+    
+    <hr>
+    
+    <h4 #dropdownText>Text in dropdown</h4>
+    <p class="mb-3">Place any freeform text within a dropdown menu with text and use spacing utilities. Note that you’ll likely need additional sizing styles to constrain the menu width.</p>
+    <div class="example">
+      <div ngbDropdown>
+        <button class="btn btn-secondary" id="dropdownTextExample" ngbDropdownToggle>Dropdown button</button>
+        <div ngbDropdownMenu class="p-4" aria-labelledby="dropdownTextExample">
+          <p>Some example text that's free-flowing within the dropdown menu.</p>
+          <p class="mb-0">And this is more example text.</p>
+        </div>
+      </div>
+    </div>
+    <app-code-preview [codeContent]="dropdownTextCode"></app-code-preview>
+    
+    <hr>
+    
+    <h4 #dropdownForm>Forms in dropdown</h4>
+    <p class="mb-3">Put a form within a dropdown menu, or make it into a dropdown menu, and use margin or padding utilities to give it the negative space you require.</p>
+    <div class="example">
+      <div ngbDropdown>
+        <button class="btn btn-secondary" id="dropdownFormExample" ngbDropdownToggle>Dropdown button</button>
+        <form ngbDropdownMenu class="p-4" aria-labelledby="dropdownFormExample">
+          <div class="mb-3">
+            <label for="exampleDropdownFormEmail2" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="exampleDropdownFormEmail2" placeholder="email@example.com">
+          </div>
+          <div class="mb-3">
+            <label for="exampleDropdownFormPassword2" class="form-label">Password</label>
+            <input type="password" class="form-control" id="exampleDropdownFormPassword2" placeholder="Password">
+          </div>
+          <button type="submit" class="btn btn-primary">Sign in</button>
+        </form>
+      </div>
+    </div>
+    <app-code-preview [codeContent]="dropdownFormCode"></app-code-preview>
+                
+  </div>
+  <div class="col-xl-2 content-nav-wrapper">
+    <ul class="nav content-nav d-flex flex-column">
+      <li class="nav-item">
+        <a (click)="scrollTo(default)" class="nav-link">Basic example</a>
+      </li>
+      <li class="nav-item">
+        <a (click)="scrollTo(variations)" class="nav-link">Dropdown variations</a>
+      </li>
+      <li class="nav-item">
+        <a (click)="scrollTo(split)" class="nav-link">Split button</a>
+      </li>
+      <li class="nav-item">
+        <a (click)="scrollTo(sizing)" class="nav-link">Sizing</a>
+      </li>
+      <li class="nav-item">
+        <a (click)="scrollTo(dropup)" class="nav-link">Dropup</a>
+      </li>
+      <li class="nav-item">
+        <a (click)="scrollTo(dropright)" class="nav-link">Dropright</a>
+      </li>
+      <li class="nav-item">
+        <a (click)="scrollTo(dropleft)" class="nav-link">Dropleft</a>
+      </li>
+      <li class="nav-item">
+        <a (click)="scrollTo(activeItem)" class="nav-link">Active menu item</a>
+      </li>
+      <li class="nav-item">
+        <a (click)="scrollTo(disabledItem)" class="nav-link">Disabled menu item</a>
+      </li>
+      <li class="nav-item">
+        <a (click)="scrollTo(dropdownHeader)" class="nav-link">Dropdown header</a>
+      </li>
+      <li class="nav-item">
+        <a (click)="scrollTo(dropdownDividers)" class="nav-link">Dropdown dividers</a>
+      </li>
+      <li class="nav-item">
+        <a (click)="scrollTo(dropdownText)" class="nav-link">Text in dropdown</a>
+      </li>
+      <li class="nav-item">
+        <a (click)="scrollTo(dropdownForm)" class="nav-link">Form in dropdown</a>
+      </li>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,35 @@
+<div class="row">
+  <div class="col-xl-10 main-content ps-xl-4 pe-xl-5">
+    <h1 class="page-title">Tooltips</h1>
+    <p class="lead">Read the <a href="https://ng-bootstrap.github.io/#/components/tooltip/examples" target="_blank">Official Ng-Bootstrap Documentation</a> for a full list of instructions and other options.</p>
+    
+    <hr>
+
+    <h4 #default>Example</h4>
+    <p class="mb-3">Hover over the links below to see tooltips.</p>
+    <div class="example">
+      <button type="button" class="btn btn-primary" placement="top" ngbTooltip="Tooltip on top">
+        Tooltip on top
+      </button>
+      <button type="button" class="btn btn-primary" placement="end" ngbTooltip="Tooltip on right">
+        Tooltip on right
+      </button>
+      <button type="button" class="btn btn-primary" placement="bottom" ngbTooltip="Tooltip on bottom">
+        Tooltip on bottom
+      </button>
+      <button type="button" class="btn btn-primary" placement="start" ngbTooltip="Tooltip on left">
+        Tooltip on left
+      </button>
+    </div>
+    <app-code-preview [codeContent]="defaultTooltipsCode"></app-code-preview>
+    
+  </div>
+  <div class="col-xl-2 content-nav-wrapper">
+    <ul class="nav content-nav d-flex flex-column">
+      <li class="nav-item">
+        <a (click)="scrollTo(default)" class="nav-link">Example</a>
+      </li>
+      
+    </ul>
+  </div>
+</div>

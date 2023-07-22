@@ -1,0 +1,95 @@
+// Plugin: Ng-select
+// github: https://github.com/ng-select/ng-select
+
+.ng-select {
+  .ng-select-container {
+    @extend .form-control;
+    padding: 0;
+    min-height: 38px;
+  }
+  .ng-arrow-wrapper .ng-arrow {
+    border-color: $text-muted transparent transparent;
+  }
+  .ng-clear-wrapper {
+    color: $text-muted;
+  }
+  &.ng-select-opened {
+    .ng-select-container {
+      background: $input-focus-bg;
+      border-color: $input-focus-border-color;
+    }
+  }
+  &.ng-select-focused:not(.ng-select-opened)>.ng-select-container {
+    border-color: $input-focus-border-color;
+  }
+  &.ng-select-single {
+    .ng-select-container {
+      height: 38px;
+      .ng-value-container .ng-input {
+        top: 7px;
+      }
+    }
+  }
+  &.ng-select-multiple {
+    .ng-select-container {
+      .ng-value-container {
+        .ng-placeholder {
+          top: 8px;
+          color: $input-placeholder-color;
+        }
+        .ng-value {
+          background-color: $primary;
+          color: $white;
+          .ng-value-icon {
+            padding: 5px 7px;
+            &:hover {
+              background-color: darken($primary, 5%);
+            }
+            &.left {
+              border-right: 1px solid rgba($white, .3);
+              &:hover {
+                border-radius: 2px 0 0 2px;
+              }
+            }
+          }
+          .ng-value-lable {
+            padding: 6px 7px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.ng-dropdown-panel {
+  border-color: $dropdown-border-color;
+  background-color: $dropdown-bg;
+  .ng-dropdown-panel-items {
+    .ng-option, .ng-optgroup {
+      background-color: $dropdown-bg;
+      color: $dropdown-color;
+      &.ng-option-marked {
+        background-color: rgba($primary, .1);
+        color: $primary;
+      }
+      &.ng-option-selected,
+      &.ng-option-selected.ng-option-marked {
+        background-color: rgba($primary, .1);
+        color: $primary;
+      }
+      &.ng-option-disabled {
+        color: $gray-800;
+      }
+    }
+  }
+  input[type=checkbox] {
+    @extend .form-check-input;
+    margin-right: 6px;
+  }
+  &.ng-select-top {
+    border-bottom-color: $dropdown-border-color;
+  }
+  &.ng-select-bottom {
+    border-top-color: $dropdown-border-color;
+  }
+}

@@ -1,0 +1,125 @@
+<div class="row">
+  <div class="col-xl-10 main-content ps-xl-4 pe-xl-5">
+    <h1 class="page-title">Pagination</h1>
+    <p class="lead">To indicate a series of related content exists across multiple pages. Read the <a href="https://ng-bootstrap.github.io/#/components/pagination/examples" target="_blank">Official Ng-Bootstrap Documentation</a> for a full list of instructions and other options.</p>
+    
+    <hr>
+    
+    <h4 #default>Basic example</h4>
+    <p class="mb-3">Pagination is built with list HTML elements so screen readers can announce the number of available links.</p>
+    <div class="example">
+      <p class="mb-2">Default pagination:</p>
+      <ngb-pagination [collectionSize]="70" [(page)]="defaultPaginationCurrentPage" aria-label="Default pagination"></ngb-pagination>
+
+      <p class="mb-2">No direction links:</p>
+      <ngb-pagination [collectionSize]="70" [(page)]="defaultPaginationCurrentPage" [directionLinks]="false"></ngb-pagination>
+
+      <p class="mb-2">With boundary links:</p>
+      <ngb-pagination [collectionSize]="70" [(page)]="defaultPaginationCurrentPage" [boundaryLinks]="true"></ngb-pagination>
+
+      <hr>
+
+      <p>Current page: {{defaultPaginationCurrentPage}}</p>
+    </div>
+    <app-code-preview [codeContent]="defaultPaginationCode"></app-code-preview>
+    
+    <hr>
+
+    <h4 #advanced>Advanced example</h4>
+    <div class="example">
+      <p class="mb-2">Restricted size, no rotation:</p>
+      <ngb-pagination [collectionSize]="120" [(page)]="advancedPaginationCurrentPage" [maxSize]="5" [boundaryLinks]="true"></ngb-pagination>
+      
+      <p class="mb-2">Restricted size with rotation:</p>
+      <ngb-pagination [collectionSize]="120" [(page)]="advancedPaginationCurrentPage" [maxSize]="5" [rotate]="true" [boundaryLinks]="true"></ngb-pagination>
+      
+      <p class="mb-2">Restricted size with rotation and no ellipses:</p>
+      <ngb-pagination [collectionSize]="120" [(page)]="advancedPaginationCurrentPage" [maxSize]="5" [rotate]="true" [ellipses]="false" [boundaryLinks]="true"></ngb-pagination>
+      
+      <hr>
+      
+      <p>Current page: {{advancedPaginationCurrentPage}}</p>
+    </div>
+    <app-code-preview [codeContent]="advancedPaginationCode"></app-code-preview>
+    
+    <hr>
+
+    <h4 #customLinks>Custom links</h4>
+    <div class="example">
+      <ngb-pagination [collectionSize]="70" [(page)]="customLinksPaginationCurrentPage" aria-label="Custom pagination">
+        <ng-template ngbPaginationPrevious>Prev</ng-template>
+        <ng-template ngbPaginationNext>Next</ng-template>
+        <ng-template ngbPaginationNumber let-p>{{ getPageSymbol(p) }}</ng-template>
+      </ngb-pagination>
+      <hr>
+      
+      <p>Current page: {{customLinksPaginationCurrentPage}}</p>
+    </div>
+    <app-code-preview [codeContent]="customLinksPaginationCode"></app-code-preview>
+    
+    <hr>
+
+    <h4 #sizing>Sizing</h4>
+    <div class="example">
+      <ngb-pagination [collectionSize]="50" [(page)]="paginationSizeCurrentPage" size="lg"></ngb-pagination>
+      <ngb-pagination [collectionSize]="50" [(page)]="paginationSizeCurrentPage"></ngb-pagination>
+      <ngb-pagination [collectionSize]="50" [(page)]="paginationSizeCurrentPage" size="sm"></ngb-pagination>
+    </div>
+    <app-code-preview [codeContent]="paginationSizeCode"></app-code-preview>
+    
+    <hr>
+
+    <h4 #alignment>Alignment</h4>
+    <p class="mb-3">Change the alignment of pagination components with flexbox utilities.</p>
+    <div class="example">
+      <ngb-pagination class="d-flex justify-content-start" [collectionSize]="70" [(page)]="paginationAlignmentCurrentPage"></ngb-pagination>
+      <ngb-pagination class="d-flex justify-content-center" [collectionSize]="70" [(page)]="paginationAlignmentCurrentPage"></ngb-pagination>
+      <ngb-pagination class="d-flex justify-content-end" [collectionSize]="70" [(page)]="paginationAlignmentCurrentPage"></ngb-pagination>
+    </div>
+    <app-code-preview [codeContent]="paginationAlignmentCode"></app-code-preview>
+    
+    <hr>
+
+    <h4 #seperated>Sperated</h4>
+    <p class="mb-3">Add calss <code>.pagination-separated</code>.</p>
+    <div class="example">
+      <ngb-pagination class="pagination-separated" [collectionSize]="70" [(page)]="paginationSeparatedCurrentPage"></ngb-pagination>
+    </div>
+    <app-code-preview [codeContent]="paginationSeparatedCode"></app-code-preview>
+    
+    <hr>
+
+    <h4 #rounded>Rounded</h4>
+    <p class="mb-3">Add calss <code>.pagination-rounded</code>.</p>
+    <div class="example">
+      <ngb-pagination class="pagination-rounded" [collectionSize]="70" [(page)]="paginationRoundedCurrentPage"></ngb-pagination>
+    </div>
+    <app-code-preview [codeContent]="paginationRoundedCode"></app-code-preview>
+    
+  </div>
+  <div class="col-xl-2 content-nav-wrapper">
+    <ul class="nav content-nav d-flex flex-column">
+      <li class="nav-item">
+        <a (click)="scrollTo(default)" class="nav-link">Basic example</a>
+      </li>
+      <li class="nav-item">
+        <a (click)="scrollTo(advanced)" class="nav-link">Advanced example</a>
+      </li>
+      <li class="nav-item">
+        <a (click)="scrollTo(customLinks)" class="nav-link">Custom links</a>
+      </li>
+      <li class="nav-item">
+        <a (click)="scrollTo(sizing)" class="nav-link">Sizing</a>
+      </li>
+      <li class="nav-item">
+        <a (click)="scrollTo(alignment)" class="nav-link">Alignment</a>
+      </li>
+      <li class="nav-item">
+        <a (click)="scrollTo(seperated)" class="nav-link">Seperated</a>
+      </li>
+      <li class="nav-item">
+        <a (click)="scrollTo(rounded)" class="nav-link">Rounded</a>
+      </li>
+    </ul>
+  </div>
+</div>

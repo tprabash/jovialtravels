@@ -1,0 +1,43 @@
+<div class="row">
+  <div class="col-xl-10 main-content ps-xl-4 pe-xl-5">
+    <h1 class="page-title">Rating</h1>
+    <p class="lead">A directive that helps visualising and interacting with a star rating bar. Read the <a href="https://ng-bootstrap.github.io/#/components/rating/examples" target="_blank">Official Ng-Bootstrap Documentation</a> for a full list of instructions and other options.</p>
+    
+    <hr>
+    
+    <h4 #default>Basic Example</h4>
+    <div class="example">
+      <ngb-rating [(rate)]="currentRate"></ngb-rating>
+
+      <p class="text-muted mt-2">Rate: <b>{{currentRate}}</b></p>
+    </div>
+    <app-code-preview [codeContent]="defaultRatingCode"></app-code-preview>
+
+    <hr>
+
+    <h4 #customTemplate>Custom star template</h4>
+    <div class="example">
+      <ngb-rating [(rate)]="currentRate">
+        <ng-template let-fill="fill" let-index="index">
+          <span [class.filled]="fill === 100" [class.bad]="index < 3">
+            <i data-feather="star" appFeatherIcon></i>
+          </span>
+        </ng-template>
+      </ngb-rating>
+
+      <p class="text-muted mt-2">Rate: <b>{{currentRate}}</b></p>
+    </div>
+    <app-code-preview [codeContent]="customTemplateCode"></app-code-preview>
+    
+  </div>
+  <div class="col-xl-2 content-nav-wrapper">
+    <ul class="nav content-nav d-flex flex-column">
+      <li class="nav-item">
+        <a (click)="scrollTo(default)" class="nav-link">Basic example</a>
+      </li>
+      <li class="nav-item">
+        <a (click)="scrollTo(customTemplate)" class="nav-link">Custom star template</a>
+      </li>
+    </ul>
+  </div>
+</div>
