@@ -2,7 +2,7 @@ import { MenuItem } from './menu.model';
 
 export const MENU: MenuItem[] = [
   {
-    label: 'Main',
+    label: 'Main Menu',
     isTitle: true
   },
   {
@@ -11,40 +11,14 @@ export const MENU: MenuItem[] = [
     link: '/dashboard'
   },
   {
-    label: 'Web Apps',
-    isTitle: true
+    label: 'Users',
+    icon: 'user',
+    link: '/apps/email/inbox'
   },
   {
-    label: 'Email',
-    icon: 'mail',
-    subItems: [
-      {
-        label: 'Inbox',
-        link: '/apps/email/inbox',
-      },
-      {
-        label: 'Read',
-        link: '/apps/email/read'
-      },
-      {
-        label: 'Compose',
-        link: '/apps/email/compose'
-      },
-    ]
-  },
-  {
-    label: 'Chat',
+    label: 'Resorts',
     icon: 'message-square',
     link: '/apps/chat',
-  },
-  {
-    label: 'Calendar',
-    icon: 'calendar',
-    link: '/apps/calendar',
-    badge: {
-      variant: 'primary',
-      text: 'Event',
-    }
   },
   {
     label: 'Components',
