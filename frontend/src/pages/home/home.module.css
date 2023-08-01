@@ -1,0 +1,172 @@
+.bg_img_top{
+    height: 100vh;
+    width: 100%;
+    background-image: url(../../assats/img/Header_new_jovial.jpg);
+    background-size: cover;
+    margin-top: -90px;
+  }
+  
+  .bg_img_second{
+    height: 100vh;
+    width: 100%;
+    background-image: url(../../assats/img/jovial_travel_secont_banner.jpg);
+    background-size: cover;
+  }
+  
+  
+  .bg_img_therd{
+    height: 100vh;
+    width: 100%;
+    background-image: url(../../assats/img/jovial_promice.jpg);
+    background-size: cover;
+  }
+  
+  .bg_img_forth{
+    height: 100vh;
+    width: 100%;
+    background-image: url(../../assats/img/jovial_travel_Honeymoon_banner.jpg);
+    background-size: cover;
+  }
+  .bg_img_fiveth{
+    height: 100vh;
+    width: 100%;
+    background-image: url(../../assats/img/jovial_travel_family.jpg);
+    background-size: cover;
+  }
+  
+  
+  
+  .display_flex{
+    display: flex;
+    flex-direction: column;
+    padding-top: 17%;
+    text-align: center;
+  }
+  .color_white{
+    color: #fff;
+  }
+  
+  h4.color_white_10{
+    color: rgba(255, 255, 255, 0.977)!important;
+    font-size: 1.4rem!important;
+  }
+  .custom_space{
+    margin-top: 130px;
+    margin-bottom: 130px;
+  }
+  .space_end{
+    margin-bottom: 100px;
+  }
+  .scroll_more {
+    margin-top: 10%!important;
+  }
+  .scroll_more p{
+    
+    font-size: 13px!important;
+    font-weight: 100;
+    color: #fff!important;
+    text-align: center;
+   
+    line-height: 1.3em;
+    letter-spacing: 0.5px;
+  }
+  .text_right_rich{
+    text-align: right;
+    padding-right: 60px;
+  }
+  
+  .paddin_top_10{
+    padding-top: 50px;
+  }
+  
+  .resort_box{
+    margin-top: 100px;
+  }
+  .resort_box img{
+    width: 100%;
+    height: 100%;
+  }
+  
+  
+  
+  .border_botm{
+    border-bottom: 1px solid #dec4b1;
+  }
+  
+  .img_box img{
+    width: 100%;
+    height: 100%;
+  }
+  
+  @media screen and (max-width: 580px) {
+    .custom_space{
+      margin-top: 80px;
+      margin-bottom: 80px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  
+    .bg_img_second{
+      height: 30vh;
+      
+    }
+    
+    
+    .bg_img_therd{
+      height: 30vh;
+      
+    }
+    .bg_img_top{
+      height: 60vh;
+   
+    }
+    .scroll_more p{
+      display: none;
+    }
+  
+    .display_flex{
+      padding-top: 44%;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  
+    .hide{
+      display: none;
+    }
+    .mobile_botom{
+      margin-bottom: 40px!important;
+    }
+    .mobile_pdn{
+      padding-left: 30px!important;
+      padding-right: 30px!important;
+    }
+  
+    .bg_img_forth{
+      height: 30vh;
+     
+    }
+    .bg_img_fiveth{
+      height: 30vh;
+     
+    }
+    .banner_botom{
+      margin-bottom: 1.5rem!important;
+    }
+    .banner_space_botom_text{
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+    .mrgin_top_80{
+      margin-top: 80px!important;
+    }
+    .mrgin_bottom_80{
+      margin-bottom: 80px!important;
+    }
+    .resort_box{
+      margin-top: 60px;
+    }
+    .resort_list_pdn{
+      padding-left: 30px!important;
+      padding-right: 30px!important;
+    }
+  }
