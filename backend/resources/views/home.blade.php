@@ -230,7 +230,7 @@
                             </a>
                         </div>
                         <div class="dropdown-item">
-                            <a href="auth-boxed-signin.html">
+                            <a href="{{ url('/logout') }}">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-log-out"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg> <span>Log Out</span>
                             </a>
                         </div>
@@ -292,7 +292,7 @@
                         <a href="#apps" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                             <div class="">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-cpu"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg>
-                                <span>Apps</span>
+                                <span>Resorts</span>
                             </div>
                             <div>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
@@ -300,10 +300,10 @@
                         </a>
                         <ul class="collapse submenu list-unstyled" id="apps" data-bs-parent="#accordionExample">
                             <li>
-                                <a href="app-calendar.html"> Calendar </a>
+                                <a href="{{ route('resorts') }}"> Resorts </a>
                             </li>
                             <li>
-                                <a href="app-chat.html"> Chat </a>
+                                <a href="{{ route('partners') }}"> Partners </a>
                             </li>
                             <li>
                                 <a href="app-mailbox.html"> Mailbox </a>
@@ -925,7 +925,7 @@
                     </div>
                     <!--  END BREADCRUMBS  -->
                     
-                    <div class="col-lg-12 col-12  layout-spacing mt-4">
+                    <div class="col-xl-12 col-12  layout-spacing mt-4">
                             <div class="statbox widget box box-shadow">
                                 <div class="widget-header">                                
                                     <div class="row">
@@ -1020,7 +1020,56 @@
                             </div>
                         </div>
 
-                </div>
+                    </div>
+
+                    <div class="container-fluid layout-spacing mt-4">
+                        <table class="table table-responsive">
+                        <tr>
+                            <th>Name</th>
+                            <th>Title</th>
+                            <th>Header Content 1</th>
+                            <th>Header Content 2</th>
+                            <th>Header Content 3</th>
+                            <th>Content 1</th>
+                            <th>Content 2</th>
+                            <th>Content 3</th>
+                            <th>Content 4</th>
+                            <th>Content 5</th>
+                            <th>Content 6</th>
+                            <th>Content 7</th>
+                            <th>Content 8</th>
+                            <th>Content 9</th>
+                            <th>Content 10</th>
+                            <th>Footer Content 1</th>
+                            <th>Footer Content 2</th>
+                            <th>Footer Content 3</th>
+                            <th>Image</th>
+                        </tr>
+                        @foreach ($offers as $offer)
+                            <tr>
+                                <td>{{ $offer->name }}</td>
+                                <td>{{ $offer->title }}</td>
+                                <td>{{ $offer->header_content_1 }}</td>
+                                <td>{{ $offer->header_content_2 }}</td>
+                                <td>{{ $offer->header_content_3 }}</td>
+                                <td>{{ $offer->content_1 }}</td>
+                                <td>{{ $offer->content_2 }}</td>
+                                <td>{{ $offer->content_3 }}</td>
+                                <td>{{ $offer->content_4 }}</td>
+                                <td>{{ $offer->content_5 }}</td>
+                                <td>{{ $offer->content_6 }}</td>
+                                <td>{{ $offer->content_7 }}</td>
+                                <td>{{ $offer->content_8 }}</td>
+                                <td>{{ $offer->content_9 }}</td>
+                                <td>{{ $offer->content_10 }}</td>
+                                <td>{{ $offer->footer_content_1 }}</td>
+                                <td>{{ $offer->footer_content_2 }}</td>
+                                <td>{{ $offer->footer_content_3 }}</td>
+                                <td>{{ $offer->image }}</td>
+                            </tr>
+                        @endforeach
+                        </table>
+                    </div>
 
             </div>
             <!--  BEGIN FOOTER  -->
