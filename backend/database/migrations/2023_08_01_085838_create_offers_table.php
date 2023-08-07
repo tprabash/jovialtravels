@@ -15,8 +15,21 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('title');
-            $table->string('description');
-            $table->string('image');
+            $table->text('header_content_1');
+            $table->text('header_content_2');
+            $table->text('content_1');
+            $table->text('content_2');
+            $table->text('content_3');
+            $table->text('content_4');
+            $table->text('content_5');
+            $table->text('content_6');
+            $table->text('content_7');
+            $table->text('content_8');
+            $table->text('content_9');
+            $table->text('content_10');
+            $table->text('footer_content_1');
+            $table->text('footer_content_2');
+            $table->text('footer_content_3');
             $table->timestamps();
         });
     }

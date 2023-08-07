@@ -276,12 +276,17 @@
                         <a href="#dashboard" data-bs-toggle="collapse" aria-expanded="true" class="dropdown-toggle">
                             <div class="">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
-                                <span>Offers</span>
+                                <span>Dashboard</span>
                             </div>
                             <div>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
                             </div>
                         </a>
+                        <ul class="collapse submenu list-unstyled show" id="dashboard" data-bs-parent="#accordionExample">
+                            <li class="active">
+                                <a href="{{ route('home') }}">Offers</a>
+                            </li>
+                        </ul>
                     </li>
 
                     <li class="menu menu-heading">
@@ -304,79 +309,6 @@
                             </li>
                             <li>
                                 <a href="{{ route('partners') }}"> Partners </a>
-                            </li>
-                            <li>
-                                <a href="app-mailbox.html"> Mailbox </a>
-                            </li>
-                            <li>
-                                <a href="app-todoList.html"> Todo List </a>
-                            </li>
-                            <li>
-                                <a href="app-notes.html"> Notes </a>
-                            </li>
-                            <li>
-                                <a href="app-scrumboard.html"> Scrumboard </a>
-                            </li>
-                            <li>
-                                <a href="app-contacts.html"> Contacts </a>
-                            </li>
-                            <li>
-                                <a href="#invoice" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle collapsed">Invoice <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg> </a>
-                                <ul class="collapse list-unstyled sub-submenu" id="invoice" data-bs-parent="#apps"> 
-                                    <li>
-                                        <a href="app-invoice-list.html"> List </a>
-                                    </li>
-                                    <li>
-                                        <a href="app-invoice-preview.html"> Preview </a>
-                                    </li>
-                                    <li>
-                                        <a href="app-invoice-add.html"> Add </a>
-                                    </li>
-                                    <li>
-                                        <a href="app-invoice-edit.html"> Edit </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#ecommerce" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle collapsed">Ecommerce <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg> </a>
-                                <ul class="collapse list-unstyled sub-submenu" id="ecommerce" data-bs-parent="#apps"> 
-                                    <li>
-                                        <a href="app-ecommerce-product-shop.html"> Shop </a>
-                                    </li>
-                                    <li>
-                                        <a href="app-ecommerce-product.html"> Product </a>
-                                    </li>
-                                    <li>
-                                        <a href="app-ecommerce-product-list.html"> List </a>
-                                    </li>
-                                    <li>
-                                        <a href="app-ecommerce-product-add.html"> Create </a>
-                                    </li>                            
-                                    <li>
-                                        <a href="app-ecommerce-product-edit.html"> Edit </a>
-                                    </li>
-                                </ul>
-                            </li>
-
-                            <li>
-                                <a href="#blog" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle collapsed">Blog <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg> </a>
-                                <ul class="collapse list-unstyled sub-submenu" id="blog" data-bs-parent="#apps"> 
-                                    <li>
-                                        <a href="app-blog-grid.html"> Grid </a>
-                                    </li>
-                                    <li>
-                                        <a href="app-blog-list.html"> List </a>
-                                    </li>
-                                    <li>
-                                        <a href="app-blog-post.html"> Post </a>
-                                    </li>
-                                    <li>
-                                        <a href="app-blog-create.html"> Create </a>
-                                    </li>                            
-                                    <li>
-                                        <a href="app-blog-edit.html"> Edit </a>
-                                    </li>
-                                </ul>
                             </li>
                         </ul>
                     </li>

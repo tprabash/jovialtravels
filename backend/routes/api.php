@@ -26,3 +26,4 @@ Route::middleware('auth:sanctum')->group(function () {
 });
 
 Route::get('/offers-list', 'App\Http\Controllers\OfferController@index');
+Route::get('/partners-list', 'App\Http\Controllers\ResortController@index');
