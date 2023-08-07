@@ -3,11 +3,18 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Resort;
 
 class ResortController extends Controller
 {
     public function index(){
-        return view('resorts');
+        $resorts = Resort::all();
+
+        if (request()->wantsJson()) {
+            return response()->json($resorts);
+        }
+    
+        return view('partners', ['resorts' => $resorts]);
     }
 
     public function store(Request $request)
@@ -71,23 +78,31 @@ class ResortController extends Controller
         return redirect()->back()->with('success', 'Resort added successfully!');
     }
 
-    public function partnersList(){
-        return view('partners');
-    }
+    public function partnerStore(Request $request)  {
 
-    public function partnerStore()  {
         $validatedData = $request->validate([
             'resort_name' => 'required|string|max:255',
             'resort_description' => 'required|string',
-            'resort_url' => 'required|url',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048', 
+            'resort_url' => 'required|string',
         ]);
         
-        $partner = new Resort();
-        $partner->resort_name = $validatedData['resort_name'];
-        $partner->resort_description = $validatedData['resort_description'];
-        $partner->resort_url = $validatedData['resort_url'];
-        $partner->save();
+        $resort = new Resort;
+        $resort->resort_name = $request->input('resort_name');
+        $resort->resort_description = $request->input('resort_description');
+        $resort->image = $request->input('image');
+        $resort->resort_url = $request->input('resort_url');
 
-        return redirect()->route('partners-index')->with('success', 'Resort partner added successfully!');
+        if($request->hasfile('image'))
+        {
+            $file = $request->file('image');
+            $extenstion = $file->getClientOriginalExtension();
+            $filename = time().'.'.$extenstion;
+            $file->move('uploads/resorts/', $filename);
+            $resort->image = $filename;
+        }
+
+        $resort->save();
+        return redirect()->back()->with('message','resort Image Upload Successfully');
     }
 }

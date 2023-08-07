@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('resorts', function (Blueprint $table) {
             $table->id();
+            $table->string('resort_name');
+            $table->text('resort_description');
+            $table->string('img')->nullable();
+            $table->string('resort_url')->nullable();
             $table->timestamps();
         });
     }
